@@ -1,0 +1,23 @@
+#body{
+    display: flex;
+}
+#body > div{
+    margin: 10px;
+}
+#sideBar{
+    width: 28%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#main-body{
+    width: 68%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#top{
+    display:flex;
+}
+#top-ads img{
+    width: 75px;
+}
+#top > div{
+    margin: auto;
+}
