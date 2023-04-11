@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: #555;
+}
+
+#Login-signup-popup{
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    /* top: 10%; */
+    left: 50%;
+    transform: translate( -50%);
+    display: flex;
+}
+#close-btn{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+   color: black;
+   font-size:20px;
+   
+  
+
+}
+
+#left{
+    width: 25%;
+    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: #fbfbfb;
+   padding: 50px 10px;
+}
+#left .sume-card{
+
+    width: 100%;
+  height: 31%;
+}
+#left .sume-card h6{
+
+margin: 10px;
+font-size: 15px;
+}
+#left .sume-card p{
+opacity: 0.6;
+margin: 10px;
+}
+/* --------right part------- */
+
+#right {
+    width: 70%;
+    /* padding: 20px; */
+   padding: 15px 40px;
+}
+
+#right #tabs{
+    width: 30%;
+display: flex;
+justify-content: space-between;
+
+
+}
+#right #tabs a{
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 40px 0px;
+
+}
+
+#login-form input{
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1.5px;
+    
+    opacity: 0.6;
+   cursor: pointer;
+   margin: 0px 0px 25px 0px;
+   font-size: 15px;
+   outline: none;
+   
+   
+}
+#login-form button{
+   
+    font-size: 15px;
+    height: 40px;
+    background-color: white;
+    color: #fb760b ;
+    border:1px solid #fb760b;
+   border-radius: 4px;
+   font-weight: 200;
+   
+}
+#other{
+width: 70%;
+}
+#other h6{
+font-size: 15px;    
+margin: 30px 0px;
+ }
+
+ #fb-btn img{
+width: 40%;
+ 
+
+ }
