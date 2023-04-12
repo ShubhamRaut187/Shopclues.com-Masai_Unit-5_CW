@@ -1,3 +1,4 @@
 //import navbar here
+//import footer here
 
-let mainBody = document.getElementById("main-body");
+let productList = document.getElementById("products-list");
