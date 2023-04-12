@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <!-- <button id = "signup-btn">signup</button> -->
+
     <div id="Login-signup-popup">
         <span id="close-btn"> &#10006</span>
         <div id="left">
@@ -34,15 +36,16 @@
             </div>
 
         </div>
-        <div id="right">
+        <div id="right-login">
             <div id="tabs">
-                <a href="login.html">LOGIN</a>
-                <a href="register.html">REGISTER</a>
+                <a id="login">LOGIN</a>
+                <a id="register">REGISTER</a>
             </div>
-            <div id="login-form">
+            <div class="login-form">
 
-                <input type="text" placeholder="Enter your mobile number or email id">
 
+                <input id="input" type="email">
+                <label id="label" for="">Enter your mobile number or email id</label>
                 <span id="red-error"></span>
                 <button id="login-btn">Login Via OTP</button>
 
@@ -50,15 +53,74 @@
             <div id="other">
                 <h6>Social Login</h6>
                 <div id="fb-btn">
-                  <a href="">  <img
-                    src="https://lh3.googleusercontent.com/8p_88tjZbsrD0Nc_KLiVdvJL5KZn4ZRd8XoPdY3RZa7Bkf7wehvdtqbZ-FCDToEbOu0bBkfJLgSY1NhDtkvOf00U-hqsa9z7xFEo0mHN">
-                </a>
+                    <a
+                        href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjgxMjgwNDQ1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D">
+                        <img
+                            src="https://lh3.googleusercontent.com/8p_88tjZbsrD0Nc_KLiVdvJL5KZn4ZRd8XoPdY3RZa7Bkf7wehvdtqbZ-FCDToEbOu0bBkfJLgSY1NhDtkvOf00U-hqsa9z7xFEo0mHN">
+                    </a>
                 </div>
-               
+
             </div>
         </div>
-    </div>
+        <!-- --------------------------------------------------- register page ------------------------------------------- -->
+        <div id="right-register">
+            <div id="tabs">
+                <a id="login-register">LOGIN</a>
+                <a id="register">REGISTER</a>
+            </div>
+            <div class="login-form">
 
+                <form action="submit">
+                    <div class="input">
+
+                        <input type="email">
+                        <label id="email" for="">Enter your email id</label>
+                    </div>
+                    <div class="input">
+
+                        <input type="number">
+                        <label id="mobile" for="">Enter your mobile number</label>
+                    </div>
+                    <div id="password" class="input">
+
+                        <input type="password">
+                        <label id="password" for="">Enter your password</label>
+                    </div>
+                    <div id="checkbox">
+                        <input type="checkbox" checked>
+                        <div>
+                            <label>Register with Password</label>
+                            <h6>By Registering you accept our <a href="http://www.shopclues.com/user-agreement.html">
+                                    User Agreement</a>
+                                and <a href="http://www.shopclues.com/privacy-policy.html">Privacy Policy</a> </h6>
+                        </div>
+
+
+                    </div>
+                    <input id="submit-btn" type="submit" value="Register">
+
+
+
+                </form>
+
+
+            </div>
+            <div id="other">
+                <h6>Social Login</h6>
+                <div id="fb-btn">
+                    <a
+                        href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjgxMjgwNDQ1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D">
+                        <img
+                            src="https://lh3.googleusercontent.com/8p_88tjZbsrD0Nc_KLiVdvJL5KZn4ZRd8XoPdY3RZa7Bkf7wehvdtqbZ-FCDToEbOu0bBkfJLgSY1NhDtkvOf00U-hqsa9z7xFEo0mHN">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </body>
+
+<script src="login.js"></script>
 
 </html>
