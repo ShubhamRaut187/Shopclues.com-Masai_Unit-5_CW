@@ -232,12 +232,12 @@ function coddetails(){
     cardPayDiv.setAttribute('class','cardPayDiv');
     
     var cardPay = document.createElement('button');
-    cardPay.setAttribute('class','cardPay');
-    cardPay.textContent = "Pay";
+    cardPay.setAttribute('id','codPay');
+    cardPay.textContent = "Pay on Delivery";
     cardPay.addEventListener('click',checkPay);
 
     function checkPay(){
-        
+        window.location.href = "paymentotp.html";
     }
 
     cardPayDiv.append(cardPay);
