@@ -11,9 +11,10 @@
 
 <body>
     <!-- <button id = "signup-btn">signup</button> -->
-
+    <div class="popup">
+<div class="overlay"></div>
     <div id="Login-signup-popup">
-        <span id="close-btn"> &#10006</span>
+        <span onclick="togglePopup()" class="close-btn"> &#10006</span>
         <div id="left">
             <div class="sume-card">
                 <img src="https://lh3.googleusercontent.com/nircuYNxhb9xmkSa0TnNdLntRXRQBvcZuRvJ5_EojwwXy6ukDt7_BQy_-Vbldf26WHBKcxQnFlb5-OdfNxgeAjJFLH4YYsCw2bdC9u0z"
@@ -70,21 +71,23 @@
             </div>
             <div class="login-form">
 
-                <form action="submit">
+                <form id="form">
                     <div class="input">
 
-                        <input type="email">
-                        <label id="email" for="">Enter your email id</label>
+                        <input id="email" type="email">
+                        <label id="emailL"for="email">Enter your email id</label>
                     </div>
+                    <span id="email-alert"></span>
                     <div class="input">
 
-                        <input type="number">
-                        <label id="mobile" for="">Enter your mobile number</label>
+                        <input id="number" type="number">
+                        <label id="mobile" for="number">Enter your mobile number</label>
                     </div>
+                    <span id="number-alert"></span>
                     <div id="password" class="input">
 
-                        <input type="password">
-                        <label id="password" for="">Enter your password</label>
+                        <input id="password" type="password">
+                        <label for="password">Enter your password</label>
                     </div>
                     <div id="checkbox">
                         <input type="checkbox" checked>
@@ -117,10 +120,12 @@
 
             </div>
         </div>
-
+    </div>
+   
     </div>
 </body>
 
 <script src="login.js"></script>
+<script src="register.js"></script>
 
 </html>
