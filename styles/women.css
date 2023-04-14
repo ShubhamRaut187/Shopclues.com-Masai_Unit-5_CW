@@ -85,6 +85,12 @@ h4{
 #bar-above-products-list a{
     color: black;
 }
+#sorting-div{
+    display: flex;
+}
+#sorting-div > p{
+    margin: 5px;
+}
 #top-ads > div{
     margin: 10px;
 }
@@ -112,4 +118,8 @@ h4{
 }
 #products-list>div:hover {
     border: 1px solid teal;
+}
+#type-filter{
+    border: none;
+    padding: 10px;   
 }

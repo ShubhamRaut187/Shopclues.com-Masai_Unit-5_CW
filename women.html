@@ -19,12 +19,12 @@
 
     <div id="body">
         <div id="sideBar">
-            <!--<select id="category-filter" name="select">
+            <select id="category-filter" name="select">
                 <option value=""><label>Category Filters</label></option>
-                <option value="mobile">Mobile</option>
-                <option value="men's-cloting">Men's Clothing</option>
-                <option value="women's-cloting">Women's Clothing</option>
-            </select>-->
+                <option value="Mobile">Mobile</option>
+                <option value="Mens">Men's Clothing</option>
+                <option value="Womens">Women's Clothing</option>
+            </select><hr>
 
             <div id="filter-by-price">
                 <h6>Price</h6>
@@ -33,7 +33,15 @@
                 <div><input type="checkbox" name="medium" id="medium"> 1001 - 2500</div>
                 <div><input type="checkbox" name="mid-high" id="mid-high"> 2501 - 5000</div>
                 <div><input type="checkbox" name="highest" id="highest"> Above 5000</div>
-            </div>
+            </div><hr>
+
+            <select id="type-filter" name="select">
+                <option value=""><label>Type Filters</label></option>
+                <option value="tops">Tops</option>
+                <option value="dress">Dresses</option>
+                <option value="jeans">Jeans</option>
+                <option value="saree">Sarees</option>
+            </select>
 
         </div>
 
@@ -116,15 +124,13 @@
                 <div>
                     <p>40 Products Found</p>
                 </div>
-                <div>
+                <div id="sorting-div">
                     <p>Sort By : </p>
-                </div>
-                <div>
-                    <a href="high-price">High Price</a> |
-                    <a href="low-price">Low Price</a> |
-                    <a href="popular">Popular Products</a> |
-                    <a href="best-selling">Best Selling</a> |
-                    <a href="new-arrivals">New Arrivals</a>
+                    <p><a href="high-price">High Price  |</a></p>
+                    <p><a href="low-price"> Low Price  |</a></p>
+                    <p><a href="popular"> Popular Products  |</a></p>
+                    <p><a href="best-selling"> Best Selling  |</a> </p>
+                    <p><a href="new-arrivals"> New Arrivals</a></p>
                 </div>
             </div>
 

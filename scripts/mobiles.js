@@ -6,17 +6,17 @@ let productList = document.getElementById("products-list");
 let carousalContainer = document.getElementById("carousal");
 slideshow();
 
-let images = [ "https://cdn.shopclues.com/images/banners/Tirtan_M_T_HB_W.jpg",
+let images = ["https://cdn.shopclues.com/images/banners/Tirtan_M_T_HB_W.jpg",
     "https://cdn.shopclues.com/images/banners/UltimateSmartphones_M_T_HB_W.jpg",
     "https://cdn.shopclues.com/images/banners/TopSellingFeaturePhone_M_T_HB_W.jpg",
     "https://cdn.shopclues.com/images/banners/Phones_Gadgets_M_T_HB_W.jpg",
-   "https://cdn.shopclues.com/images/banners/StylishTablets_M_T_HB_W.jpg"
+    "https://cdn.shopclues.com/images/banners/StylishTablets_M_T_HB_W.jpg"
 ]
-function slideshow(){
-    let i=0;
+function slideshow() {
+    let i = 0;
     let image = document.createElement("img");
-    let id = setInterval(function(){
-        if(i === 5) i = 0;
+    let id = setInterval(function () {
+        if (i === 5) i = 0;
         image.src = images[i];
         carousalContainer.append(image);
         i++;
@@ -24,16 +24,18 @@ function slideshow(){
 }
 
 fetchData()
-
-async function fetchData(){
+let mainData = [];
+async function fetchData() {
     let res = await fetch("https://shopclues-project-data.onrender.com/Mobile");
     let data = await res.json();
     console.log(data);
+    mainData = data;
     displayData(data);
 }
 
-function displayData(data){
-    data.forEach(ele => {
+function displayData(data) {
+    productList.innerHTML = null;
+    data.map((ele) => {
         let div = document.createElement("div");
 
         let img = document.createElement("img");
@@ -56,7 +58,7 @@ function displayData(data){
 
         div.append(img, h6, priceBox);
 
-        div.addEventListener("click", function(){
+        div.addEventListener("click", function () {
             storeProduct(ele);
         });
 
@@ -64,9 +66,87 @@ function displayData(data){
     });
 }
 
-function storeProduct(ele){
+function storeProduct(ele) {
     let product = JSON.parse(localStorage.getItem("product")) || {};
     product = ele;
     localStorage.setItem("product", JSON.stringify(product));
     window.location.href = "productDetails.html";
+}
+document.getElementById("category-filter").addEventListener("change", getValue);
+
+function getValue() {
+    let value = document.getElementById("category-filter").value;
+    navigate(value);
+}
+function navigate(value) {
+    if (value === "Mobile") window.location.href = "mobiles.html";
+    else if (value === "Mens") window.location.href = "men.html";
+    else if (value === "Womens") window.location.href = "women.html";
+}
+
+document.getElementById("type-filter").addEventListener("change", showType);
+
+function showType() {
+    let value = document.getElementById("type-filter").value;
+    console.log(value);
+    filterData(value);
+}
+
+function filterData(value) {
+    if (value == "") displayData(mainData);
+    else {
+        let filteredData = [];
+        mainData.forEach((ele) => {
+            if (ele.brand === value) filteredData.push(ele);;
+        })
+        console.log(filteredData);
+        displayData(filteredData);
+    }
+}
+
+document.getElementById("price-filter").addEventListener("change", showPrice);
+function showPrice(){
+    let value = document.getElementById("price-filter").value;
+    console.log(value);
+    filterAccPrice(value); 
+}
+function filterAccPrice(value){
+    if (value == "") displayData(mainData);
+    else {
+        let filteredData = [];
+        if(value == 0){
+            mainData.forEach((ele) => {
+                if (ele.price > 0 && ele.price < 10000) filteredData.push(ele);
+            })
+        }
+        else if(value == 10000){
+            mainData.forEach((ele) => {
+                if (ele.price > 9999 && ele.price < 20000) filteredData.push(ele);
+            })
+        }
+        else if(value == 20000){
+            mainData.forEach((ele) => {
+                if (ele.price > 19999 && ele.price < 100000) filteredData.push(ele);
+            })
+        }
+        
+        console.log(filteredData);
+        displayData(filteredData);
+    } 
+}
+document.getElementById("htl").addEventListener("click", sortHtl);
+
+function sortHtl(){
+    mainData.sort(function (a,b){
+        return b.price-a.price;
+    });
+    displayData(mainData);
+}
+document.getElementById("lth").addEventListener("click", sortLth);
+
+function sortLth(){
+    mainData.sort(function (a,b){
+        return a.price-b.price;
+    });
+    displayData(mainData);
 }

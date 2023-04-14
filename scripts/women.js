@@ -67,3 +67,15 @@ function storeProduct(ele){
     localStorage.setItem("product", JSON.stringify(product));
     window.location.href = "productDetails.html";
 }
+
+document.getElementById("category-filter").addEventListener("change", getValue);
+
+ function getValue(){
+    let value = document.getElementById("category-filter").value;
+    navigate(value);
+ }
+ function navigate(value){
+    if(value === "Mobile") window.location.href = "mobiles.html";
+    else if (value === "Mens") window.location.href = "men.html";
+    else if (value === "Womens") window.location.href = "women.html";
+ }
