@@ -33,7 +33,7 @@ let loginPopup = ()=>{
                   <p id="mas-otp">Please enter the OTP sent to your laptop screen.</p>
                   <div id="form-otp">
                    
-                    <input id="input-otp" type="text">
+                    <input id="input-otp" type="number" required>
                     <label id="label-otp">Enter OTP</label>
                     <button id="verifyBtn-otp">Verify &amp; Login</button>
                   </div>
@@ -48,7 +48,7 @@ let loginPopup = ()=>{
                     <div class="login-form">
         
         
-                        <input id="input" type="email">
+                        <input id="input" type="email" required >
                         <label id="label" for="">Enter your mobile number or email id</label>
                         <span id="red-error"></span>
                         <button  id="login-btn">Login Via OTP</button>
@@ -78,19 +78,19 @@ let loginPopup = ()=>{
                         <form id="form">
                             <div class="input">
         
-                                <input id="email" type="email">
+                                <input id="email" type="email" required>
                                 <label id="emailL"for="email">Enter your email id</label>
                             </div>
                             <span id="email-alert"></span>
                             <div class="input">
         
-                                <input id="numberI" type="number">
+                                <input id="numberI" type="number" required>
                                 <label id="mobileL" for="number">Enter your mobile number</label>
                             </div>
                             <span id="number-alert"></span>
                             <div id="password" class="input">
         
-                                <input id="passwordI" type="password">
+                                <input id="passwordI" type="password" required>
                                 <label id="passwordL"for="password">Enter your password</label>
                             </div>
                             <div id="checkbox">
@@ -136,4 +136,3 @@ export default loginPopup;
 
 
 // ---------------------------------------------------------------------------------------------------------------------------all-js-part----------------------------------------------------------------------------------------------------------------------------//
-

@@ -80,8 +80,8 @@ loginBtn.addEventListener("click", () => {
 // -------------------------------login-page-part------------------
 
 document.querySelector("#login-btn").addEventListener("click", login)
-document.querySelector("#red-error").textContent = ""
-document.querySelector("#input").textContent = "";
+// document.querySelector("#red-error").textContent = ""
+// document.querySelector("#input").textContent = "";
 var loginArr = JSON.parse(localStorage.getItem("account-data")) || [];
 
 
@@ -98,12 +98,13 @@ function login(event) {
                 if ((loginArr.length - 1) == i) {
                     let redAlert = document.querySelector("#red-error")
                     redAlert.textContent = ("Account doesn't exist with this email id or number. Register now")
-
+                    document.querySelector("#input").value = "";
                 }
             }
         }
     } else {
-        alert("check email and password correct or Wrong else goto REGISTER");
+        redAlert.textContent = ("check email and password correct or Wrong else goto REGISTER");
+        document.querySelector("#input").value = "";
     }
 
 }
