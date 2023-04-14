@@ -1,12 +1,14 @@
-#body{
+/*#body{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px;
 }
 #body > div{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #sideBar{
     width:17%;
+    position: fixed;
 }
 #category-filter{
     border: none;
@@ -17,7 +19,8 @@
 }
 #main-body{
     padding: 10px;
-    width: 80%;
+    width: 85%;
+    margin-left: 240px;
 }
 #top{
     display: flex;
@@ -119,7 +122,362 @@ h4{
 #products-list>div:hover {
     border: 1px solid teal;
 }
-#type-filter{
+#type-filter, #price-filter{
     border: none;
     padding: 10px;   
+}*/
+
+@media all and (min-width:1024px) {
+    #body {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    #body>div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #sideBar {
+        width: 17%;
+        position: fixed;
+    }
+
+    #category-filter {
+        border: none;
+        padding: 10px;
+    }
+
+    #filter-by-price {
+        padding: 10px;
+    }
+
+    #main-body {
+        margin-left: 240px;
+        padding: 10px;
+        width: 85%;
+    }
+
+    #top {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    #carousal-parent {
+        width: 70%;
+    }
+
+    #top-ads {
+        width: 30%;
+        margin-left: -50px;
+    }
+
+    #trending-brands {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-around;
+    }
+
+    #trending-brands>div {
+        text-align: center;
+    }
+
+    #trending-brands img:hover {
+        transform: scale(1.1);
+    }
+
+    #trending-brands img {
+        width: 250px;
+    }
+
+    #shop-by-categories {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #shop-by-categories img {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+
+    #shop-by-categories>div {
+        text-align: center;
+    }
+
+    #shop-by-categories>div:hover {
+        border: 1px solid teal;
+    }
+
+    #trending-now {
+        display: block;
+
+    }
+
+    #trending-now>div {
+        display: flex;
+        margin: 10px;
+    }
+
+    #trending-now #small {
+        width: 300px;
+        height: 250px;
+        margin-top: 50px;
+    }
+
+    #bar-above-products-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h4 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #bar-above-products-list a {
+        color: black;
+    }
+
+    #sorting-div {
+        display: flex;
+    }
+
+    #sorting-div>p {
+        margin: 5px;
+    }
+
+    #top-ads>div {
+        margin: 10px;
+    }
+
+    #trending-now #big:hover {
+        transition: transform .5s;
+        transform: scale(1.02);
+    }
+
+    #products-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #products-list>div {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #products-list>div>div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #products-list img {
+        width: 200px;
+    }
+
+    #products-list>div:hover {
+        border: 1px solid teal;
+    }
+
+    #type-filter,
+    #price-filter {
+        border: none;
+        padding: 10px;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    #body {
+        display: block;
+    }
+
+    #main-body {
+        display: block;
+    }
+
+    #carousal-parent{
+        text-align: center;
+    }
+
+    #top-ads {
+        display: flex;
+        justify-content: center;
+    }
+
+    #top-ads img {
+        width: 200px;
+    }
+
+    #trending-brands{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    #trending-brands img{
+        width: 250px;
+    }
+
+    #shop-by-categories{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    #shop-by-categories img{
+        width: 250px;
+    }
+
+    #trending-now #big{
+       width: 530px; 
+    }
+
+    #trending-now #small{
+        width: 250px; 
+     }
+
+    #categories {
+        display: flex;
+        justify-content: center;
+    }
+
+    #categories img {
+        width: 200px;
+        margin-bottom: 5px;
+    }
+
+    #categories a {
+        color: black;
+    }
+
+    #category-filter,
+    #price-filter,
+    #type-filter {
+        border: none;
+        padding: 10px;
+    }
+
+    #bar-above-products-list {
+        display: block;
+
+    }
+
+    #products-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+
+    }
+
+    #products-list img {
+        width: 200px;
+    }
+
+    #sorting-div{
+        display: flex;
+    }
+}
+
+
+
+
+
+@media all and (min-width:320px) and (max-width:767px) {
+    #body {
+        display: block;
+    }
+
+    #main-body {
+        display: block;
+    }
+
+    #carousal-parent{
+        text-align: center;
+    }
+
+    #carousal img{
+        width: 500px;
+    }
+
+    #top-ads {
+        display: flex;
+        justify-content: center;
+    }
+
+    #top-ads img {
+        width: 0px;
+    }
+
+    #trending-brands{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    #trending-brands img{
+        width: 200px;
+    }
+
+    #shop-by-categories{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    #shop-by-categories img{
+        width: 200px;
+    }
+
+    #trending-now #big{
+       width: 350px; 
+    }
+
+    #trending-now #small{
+        width: 150px; 
+     }
+
+    #categories {
+        display: flex;
+        justify-content: center;
+    }
+
+    #categories img {
+        width: 100px;
+        margin-bottom: 5px;
+    }
+
+    #categories a {
+        color: black;
+    }
+
+    #category-filter,
+    #price-filter,
+    #type-filter {
+        border: none;
+        padding: 10px;
+    }
+
+    #bar-above-products-list {
+        display: block;
+
+    }
+
+    #products-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+
+    }
+
+    #products-list img {
+        width: 200px;
+    }
+
+    #sorting-div{
+        display: flex;
+    }
 }
