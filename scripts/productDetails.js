@@ -150,9 +150,10 @@ function displayProductDetails(){
 }
 
 function addItemToCart(){
-    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let cartItems = JSON.parse(localStorage.getItem("aadToCart1")) || [];
     cartItems.push(product);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    localStorage.setItem("aadToCart1", JSON.stringify(cartItems));
+    window.alert("product added");
 }
 
 //Navbar Functions
