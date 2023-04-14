@@ -20,7 +20,7 @@ let navbar = ()=>{
         <a href="#">Notification</a>
         <a href="#">Rating</a>
         <a href="#">Cart</a>
-        <a href="#">Sign In</a>
+        <a href="#" onclick="togglePopup()">Sign In</a>
     </div>
 </div>
 <div id="navbar_div3">
