@@ -1,0 +1,162 @@
+#body {
+    display: flex;
+}
+
+#body>div {
+    margin: 10px;
+}
+
+#sideBar {
+    width: 15%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#main-body {
+    padding: 10px;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#top {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#top-ads img {
+    width: 75px;
+}
+
+#top>div {
+    margin: auto;
+}
+
+#filter-by-price {
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#categories {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#categories a {
+    color: black;
+}
+
+#categories img {
+    margin-bottom: 5px;
+}
+
+#smart-phones {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding-bottom: 50px;
+}
+
+#smart-phones img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+#smart-phones>div {
+    margin: auto;
+    padding: 20px;
+}
+
+#smart-phones>div:hover {
+    border: 1px solid teal;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#smart-phones img:hover {
+    transform: scale(1.1);
+}
+
+#bar-above-products-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bar-above-products-list a {
+    color: black;
+}
+
+#sorting-div{
+    display: flex;
+}
+
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#products-list>div {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#products-list>div>div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#products-list img {
+    width: 200px;
+}
+
+#products-list>div:hover {
+    border: 1px solid teal;
+}
+
+#category-filter {
+    border: none;
+    padding: 10px;
+}
+
+#top-ads>div {
+    display: flex;
+    border: 1px solid grey;
+    margin: auto;
+    width: 230px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#feature-phones {
+    display: flex;
+    justify-content: space-around;
+}
+
+#feature-phones>div {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+}
+
+#feature-phones img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+#feature-phones>div:hover {
+    border: 1px solid teal;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#feature-phones img:hover {
+    transform: scale(1.1);
+}
+
+h5 {
+    margin: auto;
+    margin-top: 10px;
+}

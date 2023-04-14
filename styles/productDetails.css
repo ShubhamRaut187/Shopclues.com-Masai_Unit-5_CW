@@ -1,0 +1,124 @@
+#product-showcase {
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#product-showcase>div {
+    padding: 20px;
+}
+
+#product-images {
+    display: block;
+}
+
+#main-image>img {
+    width: 400px;
+}
+
+#small-images {
+    display: flex;
+    justify-content: center;
+}
+
+#small-images>img {
+    margin-left: 10px;
+    width: 50px;
+    border: 1px solid lightsteelblue;
+}
+
+#brandDiv {
+    display: flex;
+}
+
+#money {
+    display: flex;
+}
+
+body, #main-body {
+    background-color: #eff7fa;
+}
+
+#main-body{
+    padding: 10px;
+}
+
+#main-body>div {
+    background-color: white;
+}
+
+#money>* {
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+#addToCartBtn {
+    color: orangered;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid orangered;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#prod-details {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+}
+
+#reviews {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: block;
+    padding: 20px;
+}
+
+#rating {
+    background-color: #eff7fa;
+}
+
+#reviews img {
+    width: 20px;
+}
+
+#reviews>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#reviews>div>div {
+    width: 100%;
+    padding: 10px;
+}
+
+#feedback {
+    display: flex;
+    justify-content: space-between;
+}
+
+#feedback>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#feedback #no {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+#feedback #yes {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+#bottom-img{
+    display: flex;
+    justify-content: center;    
+}

@@ -1,0 +1,115 @@
+#body{
+    display:flex;
+    justify-content: space-around;
+}
+#body > div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#sideBar{
+    width:17%;
+}
+#category-filter{
+    border: none;
+    padding: 10px;
+}
+#filter-by-price{
+    padding: 10px;
+}
+#main-body{
+    padding: 10px;
+    width: 80%;
+}
+#top{
+    display: flex;
+    margin-bottom: 20px;
+}
+#carousal-parent{
+    width: 70%;
+}
+#top-ads{
+    width: 30%;
+    margin-left: -50px;
+}
+#trending-brands{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+#trending-brands > div{
+    text-align: center;
+}
+#trending-brands img:hover{
+    transform: scale(1.1);
+}
+#trending-brands img{
+    width: 250px;
+}
+#shop-by-categories{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+}
+#shop-by-categories img{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+#shop-by-categories > div{
+    text-align: center;
+}
+#shop-by-categories > div:hover{
+    border: 1px solid teal;
+}
+#trending-now{
+    display: block;
+
+}
+#trending-now > div{
+    display: flex;
+    margin: 10px;
+}
+#trending-now #small{
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+}
+#bar-above-products-list{
+    display:flex;
+    justify-content: space-between;
+}
+h4{
+    text-align: center;
+    margin-top: 20px;
+}
+#bar-above-products-list a{
+    color: black;
+}
+#top-ads > div{
+    margin: 10px;
+}
+#trending-now #big:hover{
+    transition: transform .5s;
+    transform: scale(1.02);
+}
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#products-list>div {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+#products-list>div>div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#products-list img {
+    width: 200px;
+}
+#products-list>div:hover {
+    border: 1px solid teal;
+}
