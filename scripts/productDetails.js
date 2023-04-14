@@ -152,7 +152,7 @@ function displayProductDetails(){
 function addItemToCart(){
     let cartItems = JSON.parse(localStorage.getItem("aadToCart1")) || [];
     cartItems.push(product);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    localStorage.setItem("aadToCart1", JSON.stringify(cartItems));
 }
 
 //Navbar Functions
