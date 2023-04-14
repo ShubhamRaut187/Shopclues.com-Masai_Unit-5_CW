@@ -150,10 +150,12 @@ function displayProductDetails(){
 }
 
 function addItemToCart(){
+
     let cartItems = JSON.parse(localStorage.getItem("aadToCart1")) || [];
+
     cartItems.push(product);
     localStorage.setItem("aadToCart1", JSON.stringify(cartItems));
-    window.alert("product added");
+    window.alert("Item added to cart!");
 }
 
 //Navbar Functions
