@@ -1,0 +1,118 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#navbar_div1{
+    display: flex;
+    justify-content: flex-end;
+    /* border: 2px solid black; */
+}
+#sub_navbar_div1{
+    /* border: 2px solid black; */
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sub_navbar_div1 > a{
+    font-size: 12px;
+    color: #8d8d8d;
+    text-decoration: none;
+}
+#navbar_div2{
+    display: flex;
+    /* border: 2px solid black; */
+}
+#logo_div{
+    /* border: 2px solid black; */
+    width: 10%;
+    padding: 15px;
+}
+#logo_img{
+    width: 100%;
+}
+#searchbar_div{
+    width: 63%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searchBar{
+    width: 70%;
+    height: 32px;
+    background-color: #e9f6f7;
+    border: 1px solid #dbf0f2;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#searchBar:focus{
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+#search_btn{
+    width: 10%;
+    height: 36px;
+    background-color: #ff8451;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+#other_elements{
+    width: 27%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar_div3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    background-color: #24a3b5;
+}
+#makeinIndia_div{
+    /* border: 2px solid black; */
+    width: 5%;
+}
+#makeinIndia{
+    width: 100%;
+}
+.navbar_div3_btn{
+    height: 40px;
+    border: none;
+    background-color: #24a3b5;
+    color: white;
+    font-weight: 600;
+}
+button:hover{
+    background-color: white;
+    color: #24a3b5;
+}
+#navbar_div4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+#sub_navbar_div4{
+    width: 80%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+#sub_navbar_div4 > a{
+    color: #8d8d8d;
+    text-decoration: none;
+    font-size: 14px;
+}
