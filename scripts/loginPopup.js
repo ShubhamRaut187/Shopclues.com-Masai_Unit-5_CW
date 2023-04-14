@@ -26,6 +26,20 @@ let loginPopup = ()=>{
                     </div>
         
                 </div>
+                <div id="right">
+                <div>
+                  <span id="back-btn">&lt; Back</span>
+                  <h2 id="verificatName-otp">Verification</h2>
+                  <p id="mas-otp">Please enter the OTP sent to your laptop screen.</p>
+                  <div id="form-otp">
+                   
+                    <input id="input-otp" type="text">
+                    <label id="label-otp">Enter OTP</label>
+                    <button id="verifyBtn-otp">Verify &amp; Login</button>
+                  </div>
+                </div>
+              </div>
+
                 <div id="right-login">
                     <div id="tabs">
                         <a id="login">LOGIN</a>
@@ -52,6 +66,7 @@ let loginPopup = ()=>{
         
                     </div>
                 </div>
+               
                 <!-- --------------------------------------------------- register page ------------------------------------------- -->
                 <div id="right-register">
                     <div id="tabs">
