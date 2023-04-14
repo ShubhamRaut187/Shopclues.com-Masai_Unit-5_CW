@@ -37,7 +37,7 @@ function products(data){
 
         var imgLink = document.createElement('img');
         imgLink.setAttribute('class','imgLink');
-        imgLink.setAttribute('src',ele.image_url);
+        imgLink.setAttribute('src',ele.img_1);
 
         imgD.append(imgLink);
 
@@ -49,8 +49,7 @@ function products(data){
         p_name.textContent = ele.name;
 
         var s_size = document.createElement('span');
-        s_size.setAttribute('class','s_size');
-        s_size.textContent = "Size : "+ele.size;
+        
 
         var b1 = document.createElement("br");
 

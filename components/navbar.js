@@ -20,7 +20,7 @@ let navbar = ()=>{
     <a href="#"><i class="fa-regular fa-bell" style="color: #0794a6;"></i></a>
     <a href="#"><i class="fa-regular fa-heart" style="color: #0794a6;"></i></a>
     <a href="cart1.html"><i class="fa-solid fa-cart-shopping" style="color: #0794a6;"></i></a>
-    <button id="sign_in_btn">Sign-In</button>
+    <button id="sign_in_btn" onclick="togglePopup()">Sign-In</button>
     </div>
 </div>
 <div id="navbar_div3">
