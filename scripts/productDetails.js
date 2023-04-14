@@ -1,8 +1,8 @@
 import navbar from "../components/navbar.js";
 import footer from "../components/footer.js";
 
-document.getElementById("navbar").innerHTML = navbar;
-document.getElementById("footer").innerHTML = footer;
+document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("footer").innerHTML = footer();
 
 let product = JSON.parse(localStorage.getItem("product"));
 
@@ -152,5 +152,40 @@ function displayProductDetails(){
 function addItemToCart(){
     let cartItems = JSON.parse(localStorage.getItem("aadToCart1")) || [];
     cartItems.push(product);
-    localStorage.setItem("aadToCart1", JSON.stringify(cartItems));
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
+
+//Navbar Functions
+let gotohome = ()=>{
+    location.href = "index.html";
+}
+document.getElementById("logo_img").addEventListener("click",gotohome);
+
+let handlesearch = ()=>{
+    let search_category = document.getElementById("searchBar").value;
+    if(search_category === "Men" || search_category === "men" || search_category === "Mens" || search_category === "mens" || search_category === "Mens clothing" || search_category === "mens clothing"){
+        location.href= "men.html";
+    }
+    else if(search_category === "Women" || search_category === "women" || search_category === "Womens" || search_category === "womens" || search_category === "Womens clothing" || search_category === "womens clothing"){
+        location.href = "women.html";
+    }
+    else{
+        location.href = "mobiles.html";
+    }
+}
+document.getElementById("search_btn").addEventListener("click",handlesearch);
+
+let gotomobiles = ()=>{
+    location.href = "mobiles.html";
+}
+document.getElementById("active_btn_mobiles").addEventListener("click",gotomobiles);
+
+let gotomen = ()=>{
+    location.href = "men.html";
+}
+document.getElementById("active_btn_men").addEventListener("click",gotomen);
+
+let gotowomen = ()=>{
+    location.href = "women.html"
+}
+document.getElementById("active_btn_women").addEventListener("click",gotowomen);
