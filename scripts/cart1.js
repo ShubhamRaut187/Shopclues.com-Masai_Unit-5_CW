@@ -50,7 +50,7 @@ function products(data){
 
         var s_size = document.createElement('span');
         s_size.setAttribute('class','s_size');
-        s_size.textContent = "Size Men Upper: "+ele.size;
+        s_size.textContent = "Size : "+ele.size;
 
         var b1 = document.createElement("br");
 

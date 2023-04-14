@@ -312,7 +312,8 @@ body{
     box-shadow: 0px 2px 8px 0px rgb(255 97 98 / 46%);
     border-radius: 3px;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 100px;
 }
 
 .securityImg{

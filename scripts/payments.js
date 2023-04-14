@@ -107,10 +107,10 @@ function debitDetails(){
 
     var cardPay = document.createElement('button');
     cardPay.setAttribute('class','cardPay');
-    cardPay.textContent = "Pay" +amount ;
+    cardPay.textContent = "Pay " +amount ;
     cardPay.addEventListener('click',checkPay);
     function checkPay(){
-        if(cardNumber.value == "1111 2222 3333 4444" && cardMonth.value == "12" && cardYear.value == "22" && cardCvv.value == "123" && cardName.value == cname){
+        if(cardNumber.value == "1111 2222 3333 4444" && cardMonth.value == "11" && cardYear.value == "22" && cardCvv.value == "123" ){
             window.location.href = "paymentotp.html";
         }
         else{
@@ -204,7 +204,7 @@ function creditDetails(){
     cardPay.addEventListener('click',checkPay);
 
     function checkPay(){
-        if(cardNumber.value == "1111 2222 3333 4444" && cardMonth.value == "12" && cardYear.value == "22" && cardCvv.value == "123" && cardName.value == cname){
+        if(cardNumber.value == "1111 2222 3333 4444" && cardMonth.value == "11" && cardYear.value == "22" && cardCvv.value == "123" ){
             window.location.href = "paymentotp.html";
         }
         else{
@@ -238,7 +238,7 @@ function coddetails(){
     
     var cardPay = document.createElement('button');
     cardPay.setAttribute('id','codPay');
-    cardPay.textContent = "Pay on Delivery :("+amount+")";
+    cardPay.textContent = "Pay on Delivery : ("+amount+")";
     cardPay.addEventListener('click',checkPay);
 
     function checkPay(){

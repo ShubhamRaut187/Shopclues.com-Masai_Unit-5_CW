@@ -13,3 +13,13 @@ let amount=localStorage.getItem("lastprice");
 console.log(amount)
 let p=document.getElementById("message");
 p.textContent="your order value of : "+amount+" has been received";
+
+
+
+var con = document.querySelector('#payButton');
+con.addEventListener('click',bacTo);
+
+function bacTo(){
+   
+    window.location.href = "index.html";
+}
