@@ -26,21 +26,19 @@
                 <option value="Womens">Women's Clothing</option>
             </select><hr>
 
-            <div id="filter-by-price">
-                <h6>Price</h6>
-                <div><input type="checkbox" name="lowest" id="lowest"> 251 - 500</div>
-                <div><input type="checkbox" name="low-mid" id="low-mid"> 501 - 1000</div>
-                <div><input type="checkbox" name="medium" id="medium"> 1001 - 2500</div>
-                <div><input type="checkbox" name="mid-high" id="mid-high"> 2501 - 5000</div>
-                <div><input type="checkbox" name="highest" id="highest"> Above 5000</div>
-            </div><hr>
+            <select id="price-filter" name="select">
+                <option value=""><label>Price Filters</label></option>
+                <option value="99">99 - 499</option>
+                <option value="500">500 - 999</option>
+                <option value="1000">1000 & above</option>
+            </select><hr>
 
             <select id="type-filter" name="select">
                 <option value=""><label>Type Filters</label></option>
-                <option value="tops">Tops</option>
-                <option value="dress">Dresses</option>
-                <option value="jeans">Jeans</option>
-                <option value="saree">Sarees</option>
+                <option value="Tops">Tops</option>
+                <option value="Dress">Dresses</option>
+                <option value="Jeans">Jeans</option>
+                <option value="Saree">Sarees</option>
             </select>
 
         </div>
@@ -126,11 +124,11 @@
                 </div>
                 <div id="sorting-div">
                     <p>Sort By : </p>
-                    <p><a href="high-price">High Price  |</a></p>
-                    <p><a href="low-price"> Low Price  |</a></p>
-                    <p><a href="popular"> Popular Products  |</a></p>
-                    <p><a href="best-selling"> Best Selling  |</a> </p>
-                    <p><a href="new-arrivals"> New Arrivals</a></p>
+                    <p id="htl"> High Price  |</p>
+                    <p id="lth"> Low Price  |</p>
+                    <p> Popular Products  |</p>
+                    <p> Best Selling  |</p>
+                    <p> New Arrivals</p>
                 </div>
             </div>
 
