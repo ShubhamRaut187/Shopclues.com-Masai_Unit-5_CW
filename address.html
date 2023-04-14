@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Address</title>
+</head>
+<link rel="stylesheet" href="styles/address.css">
+<body>
+    <div class="header">
+        <img class="arrow" src="back_112351.png" alt="">
+        <img class="headerImg" src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" alt="">
+
+        <div class="cartProgress">
+            <img class="one-before-img" src="one-before.png" alt="">
+            <span class="address">Enter Address</span>
+            <img class="two-disabled-img" src="two-disabled.png" alt="">
+            <span class="payment">Payment</span>
+        </div>
+    </div>
+
+    <div class="addressDiv">
+        <h2>Edit Address</h2>
+        <div class="pincodeDiv">
+            <input type="text" required class="pincode" placeholder="Pincode">
+        </div>
+        <div class="cityDiv">
+            <input type="text" required class="city" placeholder="City">
+            <select class="states" required>
+                <option value="" disabled selected>State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+        </div>
+        <div class="nameDiv">
+            <input type="text" required placeholder="Name" class="name">
+            <input type="text" required placeholder="Phone/Mobile No." class="mobile">
+        </div>
+        <div class="houseDiv">
+            <input type="text" required placeholder="House/Flat No." class="houseNo">
+            <input type="text" required placeholder="Street/Landmark/Locality/Area" class="landmark">
+        </div>
+        <div class="saveDiv">
+            <button class="save" type="submit">Save & Continue</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="scripts/address.js"></script>
