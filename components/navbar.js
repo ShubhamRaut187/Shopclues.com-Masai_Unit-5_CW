@@ -19,7 +19,7 @@ let navbar = ()=>{
         <a href="#">Location</a>
         <a href="#">Notification</a>
         <a href="#">Rating</a>
-        <a href="#">Cart</a>
+        <a id="cartnum" href="cart1.html">Cart</a>
         <a href="#">Sign In</a>
     </div>
 </div>
