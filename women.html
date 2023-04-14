@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/women.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+    <div id="navbar"></div>
+
+    <div id="body">
+        <div id="sideBar">
+            <select id="category-filter" name="select">
+                <option value=""><label>Category Filters</label></option>
+                <option value="Mobile">Mobile</option>
+                <option value="Mens">Men's Clothing</option>
+                <option value="Womens">Women's Clothing</option>
+            </select><hr>
+
+            <div id="filter-by-price">
+                <h6>Price</h6>
+                <div><input type="checkbox" name="lowest" id="lowest"> 251 - 500</div>
+                <div><input type="checkbox" name="low-mid" id="low-mid"> 501 - 1000</div>
+                <div><input type="checkbox" name="medium" id="medium"> 1001 - 2500</div>
+                <div><input type="checkbox" name="mid-high" id="mid-high"> 2501 - 5000</div>
+                <div><input type="checkbox" name="highest" id="highest"> Above 5000</div>
+            </div><hr>
+
+            <select id="type-filter" name="select">
+                <option value=""><label>Type Filters</label></option>
+                <option value="tops">Tops</option>
+                <option value="dress">Dresses</option>
+                <option value="jeans">Jeans</option>
+                <option value="saree">Sarees</option>
+            </select>
+
+        </div>
+
+        <div id="main-body">
+            <h3>Clothings for Women</h3>
+            <div id="top">
+                <div id="carousal-parent">
+                    <div id="carousal">
+
+                    </div>
+                </div>
+
+                <div id="top-ads">
+                    <div>
+                        <img src="https://cdn.shopclues.com/images/banners/Lehengas&owns_Gold_CLP_13june_bhanu.jpg"
+                            alt="">
+                    </div>
+                    <div>
+                        <img src="https://cdn.shopclues.com/images/banners/Sarees_Clpgold_30Aug_Alam17.jpg" alt="">
+                    </div>
+
+                </div>
+            </div><hr>
+
+            <!-- add new things here-->
+            <h4>Trending Brands</h4>
+            <div id="trending-brands">
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/women-Bhagyashray.png" alt="">
+                    <p>UPTO 85% OFF</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/women-Bhuwal-Fashion.png" alt="">
+                    <p>UPTO 85% OFF</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/women-Blancora.png" alt="">
+                    <p>UPTO 80% OFF</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/women-inmarket.png" alt="">
+                    <p>UPTO 80% OFF</p>
+                </div>
+            </div><hr>
+
+            <h4>Shop By Categories</h4>
+            <div id="shop-by-categories">
+                <div>
+                    <img src="https://cdn.shopclues.com/images/thumbnails/38250/200/200/81KDZK6neZL1464416982.jpg" alt="">
+                    <p>Sarees</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/thumbnails/33135/200/200/suit21456737217.jpg" alt="">
+                    <p>Dress Material</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images1/thumbnails/90717/200/200/140108122-90717711-1664274039.jpg" alt="">
+                    <p>Tops and Tunics</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images1/thumbnails/73955/200/200/130549678-73955063-1674412928.jpg" alt="">
+                    <p>Dresses</p>
+                </div>
+            </div><hr>
+
+            <h4>Trending Now</h4>
+            <div id="trending-now">
+                <div>
+                    <img id="big" src="https://cdn.shopclues.com/images/banners/sheersarees.jpg" alt="">
+                    <img id="small" src="http://cdn.shopclues.com/images/banners/sheersarees_text.jpg" alt="">
+                </div>
+                <div>
+                    <img id="small" src="http://cdn.shopclues.com/images/banners/printedsuits_text.jpg" alt="">
+                    <img id="big" src="https://cdn.shopclues.com/images/banners/printedsuits.jpg" alt="">
+                </div>
+            </div>
+            
+
+            <div id="bar-above-products-list">
+                <div>
+                    <p>40 Products Found</p>
+                </div>
+                <div id="sorting-div">
+                    <p>Sort By : </p>
+                    <p><a href="high-price">High Price  |</a></p>
+                    <p><a href="low-price"> Low Price  |</a></p>
+                    <p><a href="popular"> Popular Products  |</a></p>
+                    <p><a href="best-selling"> Best Selling  |</a> </p>
+                    <p><a href="new-arrivals"> New Arrivals</a></p>
+                </div>
+            </div>
+
+            <div id="products-list">
+                <!--fetch products from db and append here-->
+            </div>
+
+
+            <div id="footer">
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+<script type="module" src="scripts/women.js"></script>
+
+</html>

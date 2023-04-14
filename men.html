@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/men.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+    <div id="navbar"></div>
+
+    <div id="body">
+        <div id="sideBar">
+            <select id="category-filter" name="select">
+                <option value=""><label>Category Filters</label></option>
+                <option value="Mobile">Mobile</option>
+                <option value="Mens">Men's Clothing</option>
+                <option value="Womens">Women's Clothing</option>
+            </select><hr>
+
+            <select id="price-filter" name="select">
+                <option value=""><label>Price Filters</label></option>
+                <option value="99">99 - 999</option>
+                <option value="1000">1000 - 1999</option>
+                <option value="2000">2000 & above</option>
+            </select><hr>
+
+            <select id="type-filter" name="select">
+                <option value=""><label>Type Filters</label></option>
+                <option value="Tshirt">T-Shirts</option>
+                <option value="Shirt">Shirt</option>
+                <option value="Jeans">Jeans</option>
+                <option value="Trouser">Trousers</option>
+            </select>
+
+        </div>
+
+        <div id="main-body">
+            <h3>Clothings for Men</h3>
+            <div id="top">
+                <div id="carousal-parent">
+                    <div id="carousal">
+
+                    </div>
+                </div>
+
+                <div id="top-ads">
+                    <div>
+                        <img src="https://cdn.shopclues.com/images/banners/GoldBanner_Jeans_Desk_13June.jpg"
+                            alt="">
+                    </div>
+                    <div>
+                        <img src="https://cdn.shopclues.com/images/banners/GoldBanner_Tshirt_Desk_13June.jpg" alt="">
+                    </div>
+
+                </div>
+            </div><hr>
+
+            <!-- add new things here-->
+            <h4>Trending Brands</h4>
+            <div id="trending-brands">
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/men-Colvyn-Harris.png" alt="">
+                    <p>UPTO 60% OFF</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/men-Leotude.png" alt="">
+                    <p>UPTO 85% OFF</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/men-Lambency.png" alt="">
+                    <p>UPTO 80% OFF</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/2023/Jan/10/men-Emblazon.png" alt="">
+                    <p>UPTO 85% OFF</p>
+                </div>
+            </div><hr>
+
+            <h4>Shop By Categories</h4>
+            <div id="shop-by-categories">
+                <div>
+                    <img src="https://cdn.shopclues.com/images/banners/Shop_by_categories_Western_wear_alam_8aug.jpg" alt="">
+                    <p>T-Shirts</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images1/thumbnails/101396/280/1/146861531-101396654-1561095072.jpg" alt="">
+                    <p>Shirts</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images1/thumbnails/28602/320/320/106861046-28602607-1667045070.jpg" alt="">
+                    <p>Jeans</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images1/thumbnails/95089/320/320/142646168-95089641-1667011838.jpg" alt="">
+                    <p>Trousers</p>
+                </div>
+            </div><hr>
+
+            <h4>Trending Now</h4>
+            <div id="trending-now">
+                <div>
+                    <img id="big" src="https://cdn.shopclues.com/images/banners/TN_bigPastelT-Shirts_Desk_Satin.jpg" alt="">
+                    <img id="small" src="https://cdn.shopclues.com/images/banners/TN_PastelT-Shirts_Desk_Satin.jpg" alt="">
+                </div>
+                <div>
+                    <img id="small" src="https://cdn.shopclues.com/images/banners/TN_Monochromes_Desk_Satin.jpg" alt="">
+                    <img id="big" src="https://cdn.shopclues.com/images/banners/TN_bigMonchromes_Desk_Satin.jpg" alt="">
+                </div>
+            </div>
+            
+
+            <div id="bar-above-products-list">
+                <div>
+                    <p>40 Products Found</p>
+                </div>
+                <div id="sorting-div">
+                    <p>Sort By : </p>
+                    <p id="htl"> High Price  |</p>
+                    <p id="lth"> Low Price  |</p>
+                    <p> Popular Products  |</p>
+                    <p> Best Selling  |</p>
+                    <p> New Arrivals</p>
+                </div>
+            </div>
+
+            <div id="products-list">
+                <!--fetch products from db and append here-->
+            </div>
+
+
+            <div id="footer">
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+<script type="module" src="scripts/men.js"></script>
+
+</html>
