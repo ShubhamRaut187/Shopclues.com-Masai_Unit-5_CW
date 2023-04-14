@@ -1,0 +1,251 @@
+body{
+    background-color: #eff7fa;
+}
+#slideshow_div{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    margin: 20px auto;
+    background-color: #eff7fa;
+}
+#slideshow_child_1{
+    width: 83%;
+    /* height: auto; */
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+#slideshow_imgaes_div{
+    width: 100%;
+    /* border: 2px solid black; */
+    height: 317px;
+    display: flex;
+    flex-direction: column;
+}
+.slideshow_image{
+    width: 100%;
+    height: 317px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+#slideshow_labels_div{
+    display: flex;
+    margin-top: -3px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid black; */
+    height: 52px;
+    background-color: white;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+#slideshow_child_2{
+    width: 15%;
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+/* .slideshow_products{
+    border: 2px solid black;
+} */
+.slideshow_products > img{
+    width: 100%;
+    border-radius: 8px;
+}
+/* Deals of the day */
+.parent_section_title{
+    margin-left: 25px;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+#parent_dealsofday{
+    /* border:2px solid black; */
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+.homepage_product_card{
+    /* border: 2px solid black; */
+    height: 270px;
+}
+.homepage_product_card:hover{
+    border: 1px solid skyblue;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.homepage_product_img_div{
+    width: 100%;
+    height: 140px;
+    /* border: 2px solid red; */
+    margin-top: 25px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.homepage_product_img{
+    width: 60%;
+}
+.homepage_product_details_div{
+    /* border: 2px solid yellow; */
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+}
+.homepage_product_details_div > p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.homepage_product_name{
+    color: #8d8d8d;
+}
+.span2{
+    color: #8d8d8d;
+    text-decoration: line-through;
+}
+.span3{
+    color: #24a3b5;
+}
+#parent_gadgetstore{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+    
+}
+#parent_Festivespecials{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+#parent_fasionzone{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+#discountcoupons_parent_div{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.discountcoupons_card > img{
+    width: 100%;
+    height: 200px;
+}
+#discountposter_parent_div{
+    width: 96%;
+    height: 120px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.discountposter_card > img{
+    width: 100%;
+    height: 120px;
+}
+#parent_sportsandhealth{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+#parent_brand_store{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+#parent_branded_deals{
+    width: 96%;
+    height: auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+}
+  /* Media Queries */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #parent_dealsofday{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #parent_gadgetstore{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #parent_Festivespecials{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #parent_fasionzone{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #discountcoupons_parent_div{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #parent_sportsandhealth{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #parent_brand_store{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #parent_branded_deals{
+        grid-template-columns: repeat(3,1fr);
+    }
+}    
+@media screen and (max-width:767px){
+    #parent_dealsofday{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #parent_gadgetstore{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #parent_Festivespecials{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #parent_fasionzone{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #discountcoupons_parent_div{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #parent_sportsandhealth{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #parent_brand_store{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #parent_branded_deals{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
