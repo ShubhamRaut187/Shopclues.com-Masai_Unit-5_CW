@@ -114,10 +114,11 @@ let displaydata = (data,parent)=>{
     })
 }
 let productdetails= (elem)=>{
-    // localStorage.setItem("",JSON.stringify(elem));
-    // location.href = "productDetails.html";
-    alert("added");
+    localStorage.setItem("product",JSON.stringify(elem));
+    location.href = "productDetails.html";
+    // alert("added");
 }
+
 // Function Calling
 fetchdata(Homepage_dealsofday_api,dealsofday_parent);
 fetchdata(Homepage_gadgetstore_api,gadgetstore_parent);
@@ -126,3 +127,38 @@ fetchdata(Homepage_fasionzone_api,fasionzone_parent);
 fetchdata(Homepage_sports_api,sportsandhealth_parent);
 fetchdata(Homepage_brandstore_api,brandstore_parent);
 fetchdata(Homepage_brandeddeals_api,brandeddeals_parent);
+
+//Navbar Functions
+let gotohome = ()=>{
+    location.href = "index.html";
+}
+document.getElementById("logo_img").addEventListener("click",gotohome);
+
+let handlesearch = ()=>{
+    let search_category = document.getElementById("searchBar").value;
+    if(search_category === "Men" || search_category === "men" || search_category === "Mens" || search_category === "mens" || search_category === "Mens clothing" || search_category === "mens clothing"){
+        location.href= "men.html";
+    }
+    else if(search_category === "Women" || search_category === "women" || search_category === "Womens" || search_category === "womens" || search_category === "Womens clothing" || search_category === "womens clothing"){
+        location.href = "women.html";
+    }
+    else{
+        location.href = "mobiles.html";
+    }
+}
+document.getElementById("search_btn").addEventListener("click",handlesearch);
+
+let gotomobiles = ()=>{
+    location.href = "mobiles.html";
+}
+document.getElementById("active_btn_mobiles").addEventListener("click",gotomobiles);
+
+let gotomen = ()=>{
+    location.href = "men.html";
+}
+document.getElementById("active_btn_men").addEventListener("click",gotomen);
+
+let gotowomen = ()=>{
+    location.href = "women.html"
+}
+document.getElementById("active_btn_women").addEventListener("click",gotowomen);
