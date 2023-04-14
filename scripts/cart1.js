@@ -218,6 +218,7 @@ function updateTotal(){
         var quantity = parseInt(quantityElement.innerText);
 
         total = total + (price * quantity);
+        localStorage.setItem("lastprice",total);
     }
     tP.textContent = "Total : Rs "+ total;
     gTotal.textContent = "Grand Total : Rs "+ total;
@@ -229,12 +230,14 @@ function updateTotal(){
             let x=total-afterpromo;
             document.getElementById("disc").textContent="You got discount of Rs : "+afterpromo +" After applying 20% off";
             gTotal.textContent = "Grand Total : Rs "+ x ;
+            localStorage.setItem("lastprice",x);
         }
         else if(promo=="30off"){
             let afterpromo=(total*30)/100;
             let x=total-afterpromo;
             document.getElementById("disc").textContent="You got discount of Rs : "+afterpromo +" After applying 30% off";
             gTotal.textContent = "Grand Total : Rs "+ x ;
+            localStorage.setItem("lastprice",x);
         }
         else{
             window.alert("Invalid Coupons")

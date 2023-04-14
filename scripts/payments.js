@@ -1,5 +1,7 @@
 debitDetails();
 
+
+
 let debit=document.getElementById("debit");
 debit.addEventListener("click",clicked1);
  var count = 0;
@@ -39,6 +41,7 @@ function clicked3(){
 }
 
 function debitDetails(){
+    let amount=localStorage.getItem("lastprice");
     var paymentMethodDiv = document.querySelector("#paymentMethodDiv");
     paymentMethodDiv.innerHTML="";
     count++;
@@ -104,7 +107,7 @@ function debitDetails(){
 
     var cardPay = document.createElement('button');
     cardPay.setAttribute('class','cardPay');
-    cardPay.textContent = "Pay";
+    cardPay.textContent = "Pay" +amount ;
     cardPay.addEventListener('click',checkPay);
     function checkPay(){
         if(cardNumber.value == "1111 2222 3333 4444" && cardMonth.value == "12" && cardYear.value == "22" && cardCvv.value == "123" && cardName.value == cname){
@@ -127,6 +130,7 @@ function debitDetails(){
 
 
 function creditDetails(){
+    let amount=localStorage.getItem("lastprice");
     var paymentMethodDiv = document.querySelector("#paymentMethodDiv");
     paymentMethodDiv.innerHTML="";
     count++;
@@ -196,7 +200,7 @@ function creditDetails(){
 
     var cardPay = document.createElement('button');
     cardPay.setAttribute('class','cardPay');
-    cardPay.textContent = "Pay";
+    cardPay.textContent = "Pay "+amount;
     cardPay.addEventListener('click',checkPay);
 
     function checkPay(){
@@ -221,6 +225,7 @@ function creditDetails(){
 }
 
 function coddetails(){
+    let amount=localStorage.getItem("lastprice");
     var paymentMethodDiv = document.querySelector("#paymentMethodDiv");
     paymentMethodDiv.innerHTML="";
     
@@ -233,7 +238,7 @@ function coddetails(){
     
     var cardPay = document.createElement('button');
     cardPay.setAttribute('id','codPay');
-    cardPay.textContent = "Pay on Delivery";
+    cardPay.textContent = "Pay on Delivery :("+amount+")";
     cardPay.addEventListener('click',checkPay);
 
     function checkPay(){
@@ -242,4 +247,12 @@ function coddetails(){
 
     cardPayDiv.append(cardPay);
     paymentMethodDiv.append(methodName,cardPayDiv);
+}
+
+
+var arrow = document.querySelector('.arrow');
+arrow.addEventListener('click',backTo);
+
+function backTo(){
+    window.location.href = "address.html";
 }

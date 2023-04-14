@@ -74,9 +74,10 @@ body{
 
 
 
-.message{
+#message,#orderid{
     text-align: center;
     margin-top: 60px;
+    margin-left: 30px;
     font-size: 17px;
 }
 
