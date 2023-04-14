@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgb(239,247,250);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* div{
+    border: 1px solid black;
+} */
+
+.header{
+    height: 65px;
+    background-color: white;
+    display: flex;
+}
+
+.headerImg{
+    width: 152px;
+    height: 29px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.arrow{
+    margin-left: 100px;
+    margin-top: 15px;
+    height: 29px;
+}
+
+.cartProgress{
+    display: flex;
+    width: 300px;
+    height: 100%;
+    margin-left: 850px;
+}
+
+.one-before-img{
+    width: 39px;
+    height: 39px;
+    margin-top: 11px;
+}
+
+.two-disabled-img{
+    margin-left: 30px;
+    width: 38px;
+    height: 38px;
+    margin-top: 11px;
+}
+
+.address{
+    margin-left: 5px;
+    margin-top: 21px;
+    font-size: 15px;
+}
+
+.payment{
+    margin-left: 5px;
+    margin-top: 21px;
+    font-size: 15px; 
+}
+
+.addressDiv{
+    width: 970px;
+    height: 440px;
+    margin: auto;
+    line-height: 0px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.addressDiv>h2{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.pincodeDiv{
+    margin-left: 10px;
+    width: 770px;
+    height: 33px;
+    margin-top: 40px;
+}
+
+.pincode{
+    width: 99.5%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.pincode:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.cityDiv{
+    margin-left: 10px;
+    width: 770px;
+    height: 33px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.city{
+    width: 47%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.city:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.states{
+    width: 47%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.states:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.nameDiv{
+    margin-left: 10px;
+    width: 770px;
+    height: 33px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    width: 47%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.name:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.mobile{
+    width: 47%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.mobile:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.houseDiv{
+    margin-left: 10px;
+    width: 770px;
+    height: 33px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.houseNo{
+    width: 47%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.houseNo:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.landmark{
+    width: 47%;
+    padding: 6px 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(210,210,210);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.landmark:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(18, 198, 235);
+}
+
+.saveDiv{
+    width: 210px;
+    height: 50px;
+    margin-left: 570px;
+    margin-top: 50px;
+}
+
+.save{
+    width: 210px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    color: white;
+    background-image: linear-gradient(0deg,#ff934b 0%,#ff5e62 100%);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.save:hover{
+    background-image: linear-gradient(0deg,#ff934b 0%,#f79698 100%);
+}
+
+.save:active{
+    background-image: linear-gradient(0deg,#ff934b 0%,#ff5e62 100%);
+}
+
+
+
+
+
+
