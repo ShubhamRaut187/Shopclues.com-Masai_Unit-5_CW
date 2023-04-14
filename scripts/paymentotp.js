@@ -11,7 +11,7 @@ function otpCheck(){
         message.textContent = "Payment Successful";
         thanking.textContent = "Thank You For Shopping With Shopclues.";
         setInterval(()=>{
-            window.location.href = "payment.html";
+            window.location.href = "confirmation.html";
         },2000)
         
         pushData(uDatabase);
