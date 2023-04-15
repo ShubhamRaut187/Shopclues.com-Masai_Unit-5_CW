@@ -252,7 +252,7 @@ function updateTotalPlus(t){
 var count = 0;
 function deletefunction(index){
     data.splice(index,1);
-    localStorage.setItem("cartDatabase",JSON.stringify(data));
+    localStorage.setItem("aadToCart1",JSON.stringify(data));
     products(data);
 }
 
