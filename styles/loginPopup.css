@@ -2,15 +2,15 @@
   
 
 /* -----------------------------------------------------------login-css-------------------------------- */
-*{
-    /* margin: 0px;
-    padding: 0px; */
-   box-sizing: border-box;
+/* *{
+    margin: 0px;
+    padding: 0px; 
+   box-sizing: border-box; 
 
     font-family: Roboto, Arial, Helvetica, sans-serif;
     color: #555;
 
-}
+} */
 .overlay{
     position: fixed;
     top: 0px;
