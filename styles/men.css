@@ -24,9 +24,9 @@
     }
 
     #main-body {
-        margin-left: 240px;
+        margin-left: auto;
         padding: 10px;
-        width: 85%;
+        width: 80%;
     }
 
     #top {
