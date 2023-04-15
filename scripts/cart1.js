@@ -113,8 +113,8 @@ function products(data){
 
         // var p = ele.price.split('');
         // var pri = p[2] + p[3] + p[4];
-        var reducedprice = ele.price;
-
+        var reducedprice = Number(ele.price);
+        
         var m = +ele.mrp
         var mrp = m;
         var maxprice = mrp;
@@ -181,24 +181,14 @@ function products(data){
             // shipping = shipping - s;
             // displayPrice(total,t);
             tPrice.textContent = "Rs "+total;
-            discountspan.textContent = "- Rs "+d;
-            pricespan.textContent = "Rs "+maxprice;
-            // shippingspan.textContent = "Rs "+shipping;
-            shippingspan.textContent = "FREE";
+            
             updateTotalMinus(t);
         }
 
         function displayDataPlus(quan){
             total = total + t;
-            maxprice = maxprice + mp;
-            d = d + n;
-            // shipping = shipping + s;
-            // displayPrice(total,t);
             tPrice.textContent = "Rs "+total;
-            discountspan.textContent = "- Rs "+d;
-            pricespan.textContent = "Rs "+maxprice;
-            // shippingspan.textContent = "Rs "+shipping;
-            shippingspan.textContent = "FREE";
+            
             updateTotalPlus(t);
         }
     })
@@ -262,7 +252,7 @@ function updateTotalPlus(t){
 var count = 0;
 function deletefunction(index){
     data.splice(index,1);
-    localStorage.setItem("cartDatabase",JSON.stringify(data));
+    localStorage.setItem("aadToCart1",JSON.stringify(data));
     products(data);
 }
 
@@ -298,7 +288,7 @@ var arrow = document.querySelector('.arrow');
 arrow.addEventListener('click',backTo);
 
 function backTo(){
-    window.location.href = "singleprod.html";
+    window.location.href = "index.html";
 }
 
 //order database function
