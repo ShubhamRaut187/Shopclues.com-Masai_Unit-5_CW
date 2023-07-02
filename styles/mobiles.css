@@ -1,8 +1,9 @@
-@media all and (min-width:1024px) {
+@media all and (min-width: 1024px) {
     #body {
         display: flex;
         padding: 10px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: auto;
     }
 
     #sideBar {
@@ -138,6 +139,7 @@
         margin-top: 10px;
     }
 
+   
     #feature-phones {
         display: flex;
         justify-content: space-around;
@@ -188,9 +190,10 @@
     }
 }
 
-@media all and (min-width:768px) and (max-width:1023px) {
+@media all and (min-width: 768px) and (max-width: 1023px) {
     #body {
         display: block;
+        margin: 5px;
     }
 
     #main-body {
@@ -199,6 +202,9 @@
 
     #carousal-parent{
         text-align: center;
+    }
+    #carousal img{
+        width: 700px;
     }
 
     #top-ads {
@@ -211,8 +217,13 @@
     }
 
     #categories {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
         justify-content: center;
+align-items: center;
+text-align: center;
+        width: 90%;
+        margin: auto;
     }
 
     #categories img {
@@ -273,11 +284,7 @@
     }
 }
 
-
-
-
-
-@media all and (min-width:320px) and (max-width:767px) {
+@media all and (min-width: 320px) and (max-width: 767px) {
     #body {
         display: block;
     }
@@ -338,30 +345,27 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
-
     }
 
-    #feature-phones img{
+    #feature-phones img {
         width: 100px;
     }
 
     #bar-above-products-list {
         display: block;
-
     }
 
     #products-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
-
     }
 
     #products-list img {
         width: 200px;
     }
 
-    #sorting-div{
+    #sorting-div {
         display: flex;
     }
 }

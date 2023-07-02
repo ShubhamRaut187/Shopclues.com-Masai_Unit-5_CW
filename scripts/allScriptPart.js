@@ -4,9 +4,7 @@ function togglePopup() {
 
 //import loginPopup in index.js.
 
-// import loginPopup from "./loginPopup.js";
-// let loginPopupD = document.getElementById("loginPopup");
-// loginPopupD.innerHTML = loginPopup();
+
 
 
 //add following script in index.js file

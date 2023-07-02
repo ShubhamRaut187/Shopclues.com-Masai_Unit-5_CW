@@ -16,20 +16,20 @@ let navbar = ()=>{
         <button id="search_btn">Search</button>
     </div>
     <div id="other_elements">
-        <a href="#">Location</a>
-        <a href="#">Notification</a>
-        <a href="#">Rating</a>
-        <a href="#">Cart</a>
-        <a href="#" onclick="togglePopup()">Sign In</a>
+    <a href="#"><i class="fa-solid fa-location-dot" style="color: #0794a6;"></i></a>
+    <a href="#"><i class="fa-regular fa-bell" style="color: #0794a6;"></i></a>
+    <a href="#"><i class="fa-regular fa-heart" style="color: #0794a6;"></i></a>
+    <a href="cart1.html"><i class="fa-solid fa-cart-shopping" style="color: #0794a6;"></i></a>
+    <button id="sign_in_btn" onclick="togglePopup()">Sign-In</button>
     </div>
 </div>
 <div id="navbar_div3">
     <div id="makeinIndia_div">
         <img id="makeinIndia" src="https://images.shopclues.com/images/ui/madeinindia.png" alt="madeinIndia">
     </div>
-        <button class="navbar_div3_btn">MOBILES & MORE</button>
-        <button class="navbar_div3_btn">MEN</button>
-        <button class="navbar_div3_btn">WOMEN</button>
+        <button class="navbar_div3_btn" id="active_btn_mobiles">MOBILES & MORE</button>
+        <button class="navbar_div3_btn" id="active_btn_men">MEN</button>
+        <button class="navbar_div3_btn" id="active_btn_women">WOMEN</button>
         <button class="navbar_div3_btn">HOME & KITCHEN</button>
         <button class="navbar_div3_btn">APPLIANCES</button>
         <button class="navbar_div3_btn">SPORTS & MORE</button>

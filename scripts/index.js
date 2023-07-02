@@ -1,10 +1,8 @@
 import navbar from "../components/navbar.js";
 import footer from "../components/footer.js";
-
 import loginPopup from "./loginPopup.js";
 let loginPopupD = document.getElementById("loginPopup");
 loginPopupD.innerHTML = loginPopup();
-
 let n = document.getElementById("navbar");
 n.innerHTML = navbar();
 
@@ -12,229 +10,276 @@ let f = document.getElementById("footer");
 f.innerHTML = footer();
 
 let slideshow_img = [
-    "https://cdn.shopclues.com/images/banners/2023/Mar/21/HB1_BestOfFootwear_Web_SYM_21Mar23.jpg",
-    "https://cdn.shopclues.com/images/banners/2023/Mar/25/HB2_Refurbished_Web_SYM_25Mar23.jpg",
-    "https://cdn.shopclues.com/images/banners/2023/Mar/04/HB4_Aromapure_Web_SYM_04Mar23.jpg",
-    "https://cdn.shopclues.com/images/banners/2023/Mar/29/HB4_Web_App_SYM_29Mar23.jpg",
-    "https://cdn.shopclues.com/images/banners/2023/Mar/04/HB5_Asus_Web_SYM_04Mar23.jpg"
-]
+  "https://cdn.shopclues.com/images/banners/2023/Mar/21/HB1_BestOfFootwear_Web_SYM_21Mar23.jpg",
+  "https://cdn.shopclues.com/images/banners/2023/Mar/25/HB2_Refurbished_Web_SYM_25Mar23.jpg",
+  "https://cdn.shopclues.com/images/banners/2023/Mar/04/HB4_Aromapure_Web_SYM_04Mar23.jpg",
+  "https://cdn.shopclues.com/images/banners/2023/Mar/29/HB4_Web_App_SYM_29Mar23.jpg",
+  "https://cdn.shopclues.com/images/banners/2023/Mar/04/HB5_Asus_Web_SYM_04Mar23.jpg",
+];
 
-let slideshow = ()=>{
-    let index = 0;
-    let slideshow_div = document.getElementById("slideshow_imges_div");
-    let slideshow_image = document.createElement("img");
-    slideshow_image.setAttribute("class","slideshow_image");
-    setInterval(() => {
-        slideshow_image.setAttribute("src",slideshow_img[index]);
-        slideshow_div.append(slideshow_image);
-        index++;
-        if(index === slideshow_img.length){
-            index=0;
-        }
-    }, 4000);
-}
+let slideshow = () => {
+  let index = 0;
+  let slideshow_div = document.getElementById("slideshow_imges_div");
+  let slideshow_image = document.createElement("img");
+  slideshow_image.setAttribute("class", "slideshow_image");
+  setInterval(() => {
+    slideshow_image.setAttribute("src", slideshow_img[index]);
+    slideshow_div.append(slideshow_image);
+    index++;
+    if (index === slideshow_img.length) {
+      index = 0;
+    }
+  }, 4000);
+};
 slideshow();
 
 //Data
 let dealsofday_parent = document.getElementById("parent_dealsofday");
-let Homepage_dealsofday_api = "https://shopclues-project-data.onrender.com/Homepagedealsofday";
+let Homepage_dealsofday_api =
+  "https://shopclues-project-data.onrender.com/Homepagedealsofday";
 
 let gadgetstore_parent = document.getElementById("parent_gadgetstore");
-let Homepage_gadgetstore_api = "https://shopclues-project-data.onrender.com/Homepagegadgetstore";
+let Homepage_gadgetstore_api =
+  "https://shopclues-project-data.onrender.com/Homepagegadgetstore";
 
 let festivespecial_parent = document.getElementById("parent_Festivespecials");
-let Homepage_festivespecial_api = "https://shopclues-project-data.onrender.com/Homepagefestivalstore";
+let Homepage_festivespecial_api =
+  "https://shopclues-project-data.onrender.com/Homepagefestivalstore";
 
 let fasionzone_parent = document.getElementById("parent_fasionzone");
-let Homepage_fasionzone_api = "https://shopclues-project-data.onrender.com/Homepagefashionzone";
+let Homepage_fasionzone_api =
+  "https://shopclues-project-data.onrender.com/Homepagefashionzone";
 
 let sportsandhealth_parent = document.getElementById("parent_sportsandhealth");
-let Homepage_sports_api = "https://shopclues-project-data.onrender.com/Homepagesports";
+let Homepage_sports_api =
+  "https://shopclues-project-data.onrender.com/Homepagesports";
 
 let brandstore_parent = document.getElementById("parent_brand_store");
-let Homepage_brandstore_api = "https://shopclues-project-data.onrender.com/Homepagebrandstore";
+let Homepage_brandstore_api =
+  "https://shopclues-project-data.onrender.com/Homepagebrandstore";
 
 let brandeddeals_parent = document.getElementById("parent_branded_deals");
-let Homepage_brandeddeals_api = "https://shopclues-project-data.onrender.com/Homepagebranddeals";
+let Homepage_brandeddeals_api =
+  "https://shopclues-project-data.onrender.com/Homepagebranddeals";
 // Fetch Function
-let fetchdata = (api_link,parent_element)=>{
-    let product_data = [];
-    fetch(api_link).then((response)=>{
-        return response.json();
-    }).then((response)=>{
-        product_data = response;
-        displaydata(product_data,parent_element)
-        console.log(response);
-    }).catch((error)=>{
-        console.log(error);
+let fetchdata = (api_link, parent_element) => {
+  let product_data = [];
+  fetch(api_link)
+    .then((response) => {
+      return response.json();
     })
-}
-//Display Function
-let displaydata = (data,parent)=>{
-    data.map((elem)=>{
-        let div1 = document.createElement("div");
-        div1.setAttribute("class","homepage_product_card");
-        div1.addEventListener("click",function(){
-            productdetails(elem);
-        })
-
-        let div2 = document.createElement("div");
-        div2.setAttribute("class","homepage_product_img_div");
-
-        let product_img = document.createElement("img");
-        product_img.setAttribute("class","homepage_product_img");
-        product_img.setAttribute("src",elem.img_1);
-        product_img.setAttribute("alt",elem.name);
-
-        div2.append(product_img);
-
-        let div3 = document.createElement("div");
-        div3.setAttribute("class","homepage_product_details_div");
-        
-        let Name_p = document.createElement("p");
-        Name_p.setAttribute("class","homepage_product_name")
-        Name_p.textContent = elem.name;
-
-        let Details_p = document.createElement("p");
-
-        let sp1 = document.createElement("span");
-        sp1.setAttribute("class","span1");
-        sp1.textContent = "₹"+elem.price+"  ";
-
-        let sp2 = document.createElement("span");
-        sp2.setAttribute("class","span2");
-        sp2.textContent = "₹"+elem.mrp+"  ";
-
-        
-        let sp3 = document.createElement("span");
-        sp3.setAttribute("class","span3");
-        sp3.textContent = "₹"+elem.percent_off;
-
-        Details_p.append(sp1,sp2,sp3);
-
-        div3.append(Name_p,Details_p);
-        div1.append(div2,div3);
-        parent.append(div1);
-
+    .then((response) => {
+      product_data = response;
+      displaydata(product_data, parent_element);
+      console.log(response);
     })
-}
-let productdetails= (elem)=>{
-    // localStorage.setItem("",JSON.stringify(elem));
-    // location.href = "productDetails.html";
-    alert("added");
-}
-// Function Calling
-fetchdata(Homepage_dealsofday_api,dealsofday_parent);
-fetchdata(Homepage_gadgetstore_api,gadgetstore_parent);
-fetchdata(Homepage_festivespecial_api,festivespecial_parent)
-fetchdata(Homepage_fasionzone_api,fasionzone_parent);
-fetchdata(Homepage_sports_api,sportsandhealth_parent);
-fetchdata(Homepage_brandstore_api,brandstore_parent);
-fetchdata(Homepage_brandeddeals_api,brandeddeals_parent);
-
-
-
-
-
-
-
-
-
-
-function generateOTP() {
-    var length = 4;
-    var chars = "0123456789";
-    var otp = "";
-    for (var i = 0; i < length; i++) {
-        otp += chars[Math.floor(Math.random() * chars.length)];
-    }
-    document.querySelector("#right").style.display = "block";
-    document.querySelector("#right-login").style.display = "none"
-
-    let backIcon = document.querySelector("#back-btn");
-    backIcon.addEventListener("click", () => {
-        document.querySelector("#right-login").style.display = "block"
-        document.querySelector("#right").style.display = "none";
-
+    .catch((error) => {
+      console.log(error);
     });
-    alert(otp + " : is your OTP for " + document.querySelector("#input").value + " to access ShopClues.com");
-    let verifyBtn = document.querySelector("#verifyBtn-otp");
-    verifyBtn.addEventListener("click", verifyOTP);
+};
+//Display Function
+let displaydata = (data, parent) => {
+  data.map((elem) => {
+    let div1 = document.createElement("div");
+    div1.setAttribute("class", "homepage_product_card");
+    div1.addEventListener("click", function () {
+      productdetails(elem);
+    });
 
-    function verifyOTP() {
-        let generatedOTP = otp;
-        let userOTP = document.getElementById("input-otp").value;;
+    let div2 = document.createElement("div");
+    div2.setAttribute("class", "homepage_product_img_div");
 
-        if (generatedOTP === userOTP) {
-            console.log("OTP verification successful");
-            alert("OTP Verified Successfully");
-            togglePopup()
-        } else {
-            console.log("OTP verification failed");
-            alert("Please enter a valid OTP");
-        }
+    let product_img = document.createElement("img");
+    product_img.setAttribute("class", "homepage_product_img");
+    product_img.setAttribute("src", elem.img_1);
+    product_img.setAttribute("alt", elem.name);
+
+    div2.append(product_img);
+
+    let div3 = document.createElement("div");
+    div3.setAttribute("class", "homepage_product_details_div");
+
+    let Name_p = document.createElement("p");
+    Name_p.setAttribute("class", "homepage_product_name");
+    Name_p.textContent = elem.name;
+
+    let Details_p = document.createElement("p");
+
+    let sp1 = document.createElement("span");
+    sp1.setAttribute("class", "span1");
+    sp1.textContent = "₹" + elem.price + "  ";
+
+    let sp2 = document.createElement("span");
+    sp2.setAttribute("class", "span2");
+    sp2.textContent = "₹" + elem.mrp + "  ";
+
+    let sp3 = document.createElement("span");
+    sp3.setAttribute("class", "span3");
+    sp3.textContent = "₹" + elem.percent_off;
+
+    Details_p.append(sp1, sp2, sp3);
+
+    div3.append(Name_p, Details_p);
+    div1.append(div2, div3);
+    parent.append(div1);
+  });
+};
+let productdetails = (elem) => {
+  localStorage.setItem("product", JSON.stringify(elem));
+  location.href = "productDetails.html";
+  // alert("added");
+};
+
+// Function Calling
+fetchdata(Homepage_dealsofday_api, dealsofday_parent);
+fetchdata(Homepage_gadgetstore_api, gadgetstore_parent);
+fetchdata(Homepage_festivespecial_api, festivespecial_parent);
+fetchdata(Homepage_fasionzone_api, fasionzone_parent);
+fetchdata(Homepage_sports_api, sportsandhealth_parent);
+fetchdata(Homepage_brandstore_api, brandstore_parent);
+fetchdata(Homepage_brandeddeals_api, brandeddeals_parent);
+
+//Navbar Functions
+let gotohome = () => {
+  location.href = "index.html";
+};
+document.getElementById("logo_img").addEventListener("click", gotohome);
+
+let handlesearch = () => {
+  let search_category = document.getElementById("searchBar").value;
+  if (
+    search_category === "Men" ||
+    search_category === "men" ||
+    search_category === "Mens" ||
+    search_category === "mens" ||
+    search_category === "Mens clothing" ||
+    search_category === "mens clothing"
+  ) {
+    location.href = "men.html";
+  } else if (
+    search_category === "Women" ||
+    search_category === "women" ||
+    search_category === "Womens" ||
+    search_category === "womens" ||
+    search_category === "Womens clothing" ||
+    search_category === "womens clothing"
+  ) {
+    location.href = "women.html";
+  } else {
+    location.href = "mobiles.html";
+  }
+};
+document.getElementById("search_btn").addEventListener("click", handlesearch);
+
+let gotomobiles = () => {
+  location.href = "mobiles.html";
+};
+document
+  .getElementById("active_btn_mobiles")
+  .addEventListener("click", gotomobiles);
+
+let gotomen = () => {
+  location.href = "men.html";
+};
+document.getElementById("active_btn_men").addEventListener("click", gotomen);
+
+let gotowomen = () => {
+  location.href = "women.html";
+};
+document
+  .getElementById("active_btn_women")
+  .addEventListener("click", gotowomen);
+
+// allscripts
+function generateOTP() {
+  var length = 4;
+  var chars = "0123456789";
+  var otp = "";
+  for (var i = 0; i < length; i++) {
+    otp += chars[Math.floor(Math.random() * chars.length)];
+  }
+  document.querySelector("#right").style.display = "block";
+  document.querySelector("#right-login").style.display = "none";
+
+  let backIcon = document.querySelector("#back-btn");
+  backIcon.addEventListener("click", () => {
+    document.querySelector("#right-login").style.display = "block";
+    document.querySelector("#right").style.display = "none";
+  });
+  alert(
+    otp +
+      " : is your OTP for " +
+      document.querySelector("#input").value +
+      " to access ShopClues.com"
+  );
+  let verifyBtn = document.querySelector("#verifyBtn-otp");
+  verifyBtn.addEventListener("click", verifyOTP);
+
+  function verifyOTP() {
+    let generatedOTP = otp;
+    let userOTP = document.getElementById("input-otp").value;
+
+    if (generatedOTP === userOTP) {
+      console.log("OTP verification successful");
+      alert("OTP Verified Successfully");
+      togglePopup();
+    } else {
+      console.log("OTP verification failed");
+      alert("Please enter a valid OTP");
     }
+  }
 }
-
-
-
-
 
 // -------------------------------chang login and register page
 
+let popupmain = document.querySelector(".Login-signup-popup");
 
-let popupmain = document.querySelector(".Login-signup-popup")
+let loginPage = document.querySelector("#right-login");
+let registerPage = document.querySelector("#right-register");
 
-let loginPage = document.querySelector("#right-login")
-let registerPage = document.querySelector("#right-register")
-
-let registerBtn = document.querySelector("#on-login-register-btn")
-
+let registerBtn = document.querySelector("#on-login-register-btn");
 
 registerBtn.addEventListener("click", () => {
-    loginPage.style.display = "none";
-    registerPage.style.display = "block";
-    console.log("hi ")
-})
-let loginBtn = document.querySelector("#login-register")
+  loginPage.style.display = "none";
+  registerPage.style.display = "block";
+  console.log("hi ");
+});
+let loginBtn = document.querySelector("#login-register");
 loginBtn.addEventListener("click", () => {
-
-    loginPage.style.display = "block";
-    registerPage.style.display = "none";
-    console.log("hi ")
-})
-
+  loginPage.style.display = "block";
+  registerPage.style.display = "none";
+  console.log("hi ");
+});
 
 // -------------------------------login-page-part------------------
 
-document.querySelector("#login-btn").addEventListener("click", login)
+document.querySelector("#login-btn").addEventListener("click", login);
 // document.querySelector("#red-error").textContent = ""
 // document.querySelector("#input").textContent = "";
 var loginArr = JSON.parse(localStorage.getItem("account-data")) || [];
 
-
 function login(event) {
-    event.preventDefault();
-    var emailI = document.querySelector("#input").value
+  event.preventDefault();
+  var emailI = document.querySelector("#input").value;
 
-    if (loginArr.length > 0) {
-        for (let i = 0; i < loginArr.length; i++) {
-            if (loginArr[i].email == emailI || loginArr[i].number == emailI) {
-                generateOTP();
-                break;
-            } else {
-                if ((loginArr.length - 1) == i) {
-                    let redAlert = document.querySelector("#red-error")
-                    redAlert.textContent = ("Account doesn't exist with this email id or number. Register now")
-                    document.querySelector("#input").value = "";
-                }
-            }
+  if (loginArr.length > 0) {
+    for (let i = 0; i < loginArr.length; i++) {
+      if (loginArr[i].email == emailI || loginArr[i].number == emailI) {
+        generateOTP();
+        break;
+      } else {
+        if (loginArr.length - 1 == i) {
+          let redAlert = document.querySelector("#red-error");
+          redAlert.textContent =
+            "Account doesn't exist with this email id or number. Register now";
+          document.querySelector("#input").value = "";
         }
-    } else {
-        redAlert.textContent = ("check email and password correct or Wrong else goto REGISTER");
-        document.querySelector("#input").value = "";
+      }
     }
-
+  } else {
+    // redAlert.textContent = ("check email and password correct or Wrong else goto REGISTER");
+    // document.querySelector("#input").value = "";
+  }
 }
 
 //  -------------------------------------register-page-part----------------------------------------
@@ -242,121 +287,126 @@ function login(event) {
 const signupForm = document.querySelector("#submit-btn");
 
 signupForm.addEventListener("click", function () {
-    event.preventDefault();
+  event.preventDefault();
 
+  const mobilNumber = document.querySelector("#numberI");
+  const emailInput = document.querySelector("#email");
+  const passwordInput = document.querySelector("#passwordI");
 
-    const mobilNumber = document.querySelector("#numberI")
-    const emailInput = document.querySelector("#email");
-    const passwordInput = document.querySelector("#passwordI");
+  let accounts = JSON.parse(localStorage.getItem("account-data")) || [];
 
-    let accounts = JSON.parse(localStorage.getItem("account-data")) || [];
+  if (accounts.find((account) => account.email === emailInput.value)) {
+    let redAlertE = document.querySelector("#email-alert");
+    redAlertE.textContent =
+      "Account already exists with this email. Please login.";
+    let redAlertN = document.querySelector("#number-alert");
+    redAlertN.textContent =
+      "Account already exists with this mobile number. Please login.";
 
-    if (accounts.find((account) => account.email === emailInput.value)) {
+    return;
+  }
 
-        let redAlertE = document.querySelector("#email-alert")
-        redAlertE.textContent = ("Account already exists with this email. Please login.")
-        let redAlertN = document.querySelector("#number-alert")
-        redAlertN.textContent = ("Account already exists with this mobile number. Please login.")
+  const newAccount = {
+    number: mobilNumber.value,
+    email: emailInput.value,
+    password: passwordInput.value,
+  };
 
-        return;
-    }
+  accounts.push(newAccount);
 
-    const newAccount = {
-        number: mobilNumber.value,
-        email: emailInput.value,
-        password: passwordInput.value,
-    };
+  localStorage.setItem("account-data", JSON.stringify(accounts));
 
-    accounts.push(newAccount);
+  alert("Account created successfully!");
+  document.querySelector("#right-login").style.display = "block";
+  document.querySelector("#right-register").style.display = "none";
 
-    localStorage.setItem("account-data", JSON.stringify(accounts));
-
-    alert("Account created successfully!");
-    document.querySelector("#right-login").style.display = "block";
-    document.querySelector("#right-register").style.display = "none";
-
-    mobilNumber.value = "";
-    emailInput.value = "";
-    passwordInput.value = "";
-
+  mobilNumber.value = "";
+  emailInput.value = "";
+  passwordInput.value = "";
 });
 
+function adjustLayout() {
+  // Get the current window width
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  let dataL = document.querySelector(" #input");
+  dataL.addEventListener("change", dataLf);
 
-let dataL = document.querySelector(" #input")
-dataL.addEventListener("change", dataLf);
-
-function dataLf() {
-
+  function dataLf() {
     if (dataL.value !== "") {
-        document.querySelector("#label").style.top = " 15%";
-        document.querySelector("#label").style.left = "33%";
-
+      document.querySelector("#label").style.top = " 15%";
+      document.querySelector("#label").style.left = "33%";
     } else {
-        document.querySelector("#label").style.top = " 18%";
-        document.querySelector("#label").style.left = "34%";
-        let redAlert = document.querySelector("#red-error")
-        redAlert.textContent = ("")
+      if (windowWidth < 768) {
 
 
+        document.querySelector("#label").style.top = " 16%";
 
+        document.querySelector("#label").style.left = "6%";
+      }
+
+      document.querySelector("#label").style.left = "34%";
+      let redAlert = document.querySelector("#red-error");
+      redAlert.textContent = "";
     }
-    console.log("datal")
-}
+    console.log("datal");
+  }
 
-let data1 = document.querySelector(" #email")
-data1.addEventListener("change", data1f);
+  let data1 = document.querySelector(" #email");
+  data1.addEventListener("change", data1f);
 
-function data1f() {
-
+  function data1f() {
     if (data1.value !== "") {
-        document.querySelector("#emailL").style.top = "-5px";
-        document.querySelector("#emailL").style.left = "-1px";
+      document.querySelector("#emailL").style.top = "-5px";
+      document.querySelector("#emailL").style.left = "-1px";
     } else {
-        document.querySelector("#emailL").style.top = "50%";
-        document.querySelector("#emailL").style.left = "5px";
+      document.querySelector("#emailL").style.top = "50%";
+      document.querySelector("#emailL").style.left = "5px";
     }
-    console.log("data1")
-}
+    console.log("data1");
+  }
 
-
-
-let data2 = document.querySelector("#numberI")
-data2.addEventListener("change", data2f)
-function data2f() {
+  let data2 = document.querySelector("#numberI");
+  data2.addEventListener("change", data2f);
+  function data2f() {
     if (data2.value !== "") {
-        document.querySelector("#mobileL").style.top = "-1px";
-        document.querySelector("#mobileL").style.left = "-1px";
+      document.querySelector("#mobileL").style.top = "-1px";
+      document.querySelector("#mobileL").style.left = "-1px";
     } else {
-        document.querySelector("#mobileL").style.top = "50%";
-        document.querySelector("#mobileL").style.left = "5px";
+      document.querySelector("#mobileL").style.top = "50%";
+      document.querySelector("#mobileL").style.left = "5px";
     }
-    console.log("data2")
-}
+    console.log("data2");
+  }
 
-
-let data3 = document.querySelector("#passwordI")
-data3.addEventListener("change", data3f)
-function data3f() {
+  let data3 = document.querySelector("#passwordI");
+  data3.addEventListener("change", data3f);
+  function data3f() {
     if (data3.value !== "") {
-        document.querySelector("#passwordL").style.top = "-1px";
-        document.querySelector("#passwordL").style.left = "-1px";
+      document.querySelector("#passwordL").style.top = "-1px";
+      document.querySelector("#passwordL").style.left = "-1px";
     } else {
-        document.querySelector("#passwordL").style.top = "50%";
-        document.querySelector("#passwordL").style.left = "5px";
+      document.querySelector("#passwordL").style.top = "50%";
+      document.querySelector("#passwordL").style.left = "5px";
     }
-    console.log("data3")
-}
+    console.log("data3");
+  }
 
-
-let data4 = document.querySelector("#input-otp")
-data4.addEventListener("change", data4f)
-function data4f() {
+  let data4 = document.querySelector("#input-otp");
+  data4.addEventListener("change", data4f);
+  function data4f() {
     if (data4.value !== "") {
-        document.querySelector("#label-otp").style.top = "21%";
-
+        if (windowWidth < 768) {
+            document.querySelector("#label-otp").style.top = "21%";
+        }
+      document.querySelector("#label-otp").style.top = "21%";
     } else {
-        document.querySelector("#label-otp").style.top = "25%";
-
+      document.querySelector("#label-otp").style.top = "25%";
     }
-    console.log("data3")
+    console.log("data3");
+  }
+
+  if (windowWidth < 768) {
+  }
+
+  adjustLayout();
 }

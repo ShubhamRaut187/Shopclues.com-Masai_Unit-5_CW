@@ -1,7 +1,7 @@
 //Footer Function
 let footer = ()=>{
     return ` <div id="foooter_sub_1">
-    <img src="Footer1.jpg" alt="footer1">
+    <img src="images/Footer1.jpg" alt="footer1">
 </div>
 <div id="footer_sub_2">
     <div class="footer_sub_2_child">
@@ -50,7 +50,7 @@ let footer = ()=>{
     </div>
 </div>
 <div id="footer_sub_3">
-    <img src="Footer2.jpg" alt="2">
+    <img src="images/Footer2.jpg" alt="2">
 </div>
 <div id="footer_sub_4">
     <h3>Our Leading Categories</h3>

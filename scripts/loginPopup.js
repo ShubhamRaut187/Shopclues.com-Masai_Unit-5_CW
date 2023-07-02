@@ -6,20 +6,20 @@ let loginPopup = ()=>{
                 <span onclick="togglePopup()" class="close-btn"> &#10006</span>
                 <div id="left">
                     <div class="sume-card">
-                        <img src="https://lh3.googleusercontent.com/nircuYNxhb9xmkSa0TnNdLntRXRQBvcZuRvJ5_EojwwXy6ukDt7_BQy_-Vbldf26WHBKcxQnFlb5-OdfNxgeAjJFLH4YYsCw2bdC9u0z"
+                        <img src="images/rupee.jpeg"
                             alt="">
                         <h6>Loyalty Points</h6>
                         <p>Earn CluesBucks on prepaid orders</p>
         
                     </div>
                     <div class="sume-card">
-                        <img src="https://lh3.googleusercontent.com/KFWdTn49Ms8G_M_yLbNtuO4cEoz2L1TLqXB3oGK82qiKRhi9YofeLMO8UMgcQOxmjKNSzqfkdAEvToK14-TVN-cyv91iQimHr7lNGh9q"
+                        <img src="images/cart.jpeg"
                             alt="">
                         <h6>Instant Checkout</h6>
                         <p>Hassle-Free Payment Everytime</p>
                     </div>
                     <div class="sume-card">
-                        <img src="https://lh3.googleusercontent.com/SGf5zr1EZp2QMU7vixY-pW2TNGacDcfxMzGclbS5WG9zVdPrpMm4xAq1JWlcUjxfW8p16OfVjzpFl0VE0mOYnCwtLFYSrfbMXZla1Gw"
+                        <img src="images/par.jpeg"
                             alt="">
                         <h6>Exclusive Offers</h6>
                         <p>For special offers &amp; value deals</p>
@@ -33,8 +33,8 @@ let loginPopup = ()=>{
                   <p id="mas-otp">Please enter the OTP sent to your laptop screen.</p>
                   <div id="form-otp">
                    
-                    <input id="input-otp" type="number" required>
-                    <label id="label-otp">Enter OTP</label>
+                    <input id="input-otp" type="number" required placeholder="Enter OTP" >
+                    
                     <button id="verifyBtn-otp">Verify &amp; Login</button>
                   </div>
                 </div>
@@ -48,8 +48,8 @@ let loginPopup = ()=>{
                     <div class="login-form">
         
         
-                        <input id="input" type="email" required >
-                        <label id="label" for="">Enter your mobile number or email id</label>
+                        <input id="input" type="email" required placeholder="Enter your mobile number or email id" >
+                       
                         <span id="red-error"></span>
                         <button  id="login-btn">Login Via OTP</button>
         
@@ -60,7 +60,7 @@ let loginPopup = ()=>{
                             <a
                                 href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjgxMjgwNDQ1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D">
                                 <img
-                                    src="https://lh3.googleusercontent.com/8p_88tjZbsrD0Nc_KLiVdvJL5KZn4ZRd8XoPdY3RZa7Bkf7wehvdtqbZ-FCDToEbOu0bBkfJLgSY1NhDtkvOf00U-hqsa9z7xFEo0mHN">
+                                    src="images/fb.jpeg">
                             </a>
                         </div>
         
@@ -78,20 +78,20 @@ let loginPopup = ()=>{
                         <form id="form">
                             <div class="input">
         
-                                <input id="email" type="email" required>
-                                <label id="emailL"for="email">Enter your email id</label>
+                                <input id="email" type="email" required placeholder="Enter your email id">
+                               
                             </div>
                             <span id="email-alert"></span>
                             <div class="input">
         
-                                <input id="numberI" type="number" required>
-                                <label id="mobileL" for="number">Enter your mobile number</label>
+                                <input id="numberI" type="number" required placeholder="Enter your mobile number">
+                               
                             </div>
                             <span id="number-alert"></span>
                             <div id="password" class="input">
         
-                                <input id="passwordI" type="password" required>
-                                <label id="passwordL"for="password">Enter your password</label>
+                                <input id="passwordI" type="password" required  placeholder="Enter your password">
+                                
                             </div>
                             <div id="checkbox">
                                 <input type="checkbox" checked>
@@ -118,7 +118,7 @@ let loginPopup = ()=>{
                             <a
                                 href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjgxMjgwNDQ1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D">
                                 <img
-                                    src="https://lh3.googleusercontent.com/8p_88tjZbsrD0Nc_KLiVdvJL5KZn4ZRd8XoPdY3RZa7Bkf7wehvdtqbZ-FCDToEbOu0bBkfJLgSY1NhDtkvOf00U-hqsa9z7xFEo0mHN">
+                                    src="images/fb.jpeg">
                             </a>
                         </div>
         
