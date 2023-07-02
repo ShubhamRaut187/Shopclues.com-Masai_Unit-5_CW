@@ -19,13 +19,13 @@ body{
 #slideshow_imgaes_div{
     width: 100%;
     /* border: 2px solid black; */
-    height: 317px;
+    /* height: 317px; */
     display: flex;
     flex-direction: column;
 }
 .slideshow_image{
     width: 100%;
-    height: 317px;
+    /* height: 317px; */
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
@@ -249,3 +249,13 @@ body{
         grid-template-columns: repeat(2,1fr);
     }
 }
+
+@media only screen and (max-width: 480px) {
+    #slideshow_labels_div {
+display: none
+    }
+
+}
+
+
+
