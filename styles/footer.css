@@ -12,6 +12,7 @@
     background-color: white;
     margin-top: 40px;
     margin: auto;
+    
 }
 
 #foooter_sub_1 {
@@ -56,6 +57,7 @@
 
 #footer_sub_4 > p{
     font-weight: 600;
+   
 }
 
 #footer_sub_4 > h3{
@@ -64,6 +66,7 @@
 
 #footer_sub_5{
     background-color:  #eff7fa;
+    padding: 10px
 }
 
 #footer_sub_5 > h3{

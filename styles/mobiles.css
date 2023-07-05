@@ -204,7 +204,7 @@
         text-align: center;
     }
     #carousal img{
-        width: 700px;
+        width: 500px;
     }
 
     #top-ads {
@@ -287,6 +287,7 @@ text-align: center;
 @media all and (min-width: 320px) and (max-width: 767px) {
     #body {
         display: block;
+        padding: 5px;
     }
 
     #main-body {
@@ -299,6 +300,7 @@ text-align: center;
 
     #carousal img{
         width: 500px;
+        display: none;
     }
 
     #top-ads {
@@ -311,8 +313,9 @@ text-align: center;
     }
 
     #categories {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        /* justify-content: center; */
+        grid-template-columns: repeat(2 1fr);
     }
 
     #categories img {
@@ -362,7 +365,7 @@ text-align: center;
     }
 
     #products-list img {
-        width: 200px;
+        width: 100px;
     }
 
     #sorting-div {
