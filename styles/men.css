@@ -1,168 +1,249 @@
-@media all and (min-width:1024px) {
+
+  
+  @media (min-width: 1024px) {
     #body {
         display: flex;
-        justify-content: space-between;
         padding: 10px;
-        margin: 10px;
-    }
-
-    #body>div {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-
-    #sideBar {
-        width: 16%;
-        position: fixed;
-    }
-
-    #category-filter {
-        border: none;
-        padding: 10px;
-    }
-
-    #filter-by-price {
-        padding: 10px;
-    }
-
-    #main-body {
-        margin-left: 240px;
-        padding: 10px;
-        width: 85%;
-    }
-
-    #top {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    #carousal-parent {
-        width: 70%;
-    }
-
-    #top-ads {
-        width: 30%;
-        margin-left: -50px;
-    }
-
-    #trending-brands {
-        display: flex;
-        margin-top: 20px;
-        justify-content: space-around;
-    }
-
-    #trending-brands>div {
-        text-align: center;
-    }
-
-    #trending-brands img:hover {
-        transform: scale(1.1);
-    }
-
-    #trending-brands img {
-        width: 250px;
-    }
-
-    #shop-by-categories {
-        display: flex;
-        justify-content: space-around;
-        padding: 10px;
-        margin: 10px;
-    }
-
-    #shop-by-categories img {
-        width: 250px;
-        height: 250px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         margin: auto;
-    }
-
-    #shop-by-categories>div {
-        text-align: center;
-    }
-
-    #shop-by-categories>div:hover {
-        border: 1px solid teal;
-    }
-
-    #trending-now {
-        display: block;
-
-    }
-
-    #trending-now>div {
+        gap: 10px;
+      }
+      #top-ads img {
+width: 100%;
+      }
+      #sideBar {
+        width: 20%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: 200px;
+        /* position: fixed; */
+      }
+      
+      #main-body {
+        padding: 5px;
+        /* margin-left: 100px; */
+        width: 80%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #carousal-parent img{
+        width: 500px;
+      }
+      
+      #top {
         display: flex;
+        margin-bottom: 10px;
+      }
+      
+      #top-ads img {
+        width: 75px;
+      }
+      
+      #top>div {
+        margin: auto;
+      }
+      #top>div img {
+        margin: auto;
+        width: 90%;
+      }
+      
+      #filter-by-price {
         margin: 10px;
-        align-items: center;
-        justify-content: center;
-    }
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      
+      #categories {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      #categories a {
+        color: black;
+      }
+      #shop-by-categories{
+        display: flex;
+      }
+      #shop-by-categories img{
+        width: 200px;
+      }
+      #categories img {
+        margin-bottom: 5px;
+        width: 120px;
+      }
+      #trending-brands{
+        display: flex;
 
-    #trending-now #small {
-        width: 300px;
-        height: 250px;
-        margin-top: 50px;
-    }
-
-    #bar-above-products-list {
+      }
+      #trending-brands img{
+        width: 200px;
+      }
+      #smart-phones {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding-bottom: 50px;
+      }
+      
+      #smart-phones img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      
+      #smart-phones>div {
+        margin: auto;
+        padding: 20px;
+      }
+      
+      #smart-phones>div:hover {
+        border: 1px solid teal;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      
+      #smart-phones img:hover {
+        transform: scale(1.1);
+      }
+      
+      #bar-above-products-list {
         display: flex;
         justify-content: space-between;
-    }
-
-    h4 {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    #bar-above-products-list a {
+      }
+      
+      #bar-above-products-list a {
         color: black;
-    }
-
-    #sorting-div {
+      }
+      
+      #sorting-div {
         display: flex;
-    }
-
-    #sorting-div>p {
+      }
+      
+      #sorting-div>p {
         margin: 5px;
-    }
-
-    #top-ads>div {
-        margin: 10px;
-    }
-
-    #trending-now #big:hover {
-        transition: transform .5s;
-        transform: scale(1.02);
-    }
-
-    #products-list {
+      }
+      
+      #products-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    #products-list>div {
-        display: block;
-        width: 100%;
+      }
+      
+      #products-list>div {
         text-align: center;
         padding: 10px;
-    }
-
-    #products-list>div>div {
+      }
+      
+      #products-list>div>div {
         display: flex;
         justify-content: space-evenly;
-    }
-
-    #products-list img {
-        width: 200px;
-    }
-
-    #products-list>div:hover {
+      }
+      
+      #products-list img {
+        width: 150px;
+      }
+      
+      #products-list>div:hover {
         border: 1px solid teal;
-    }
-
-    #type-filter,
-    #price-filter {
+      }
+      
+      #category-filter,
+      #price-filter,
+      #type-filter {
         border: none;
         padding: 10px;
+      }
+      
+      #top-ads>div {
+        display: flex;
+        border: 1px solid grey;
+        margin: auto;
+        width: 230px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      
+      #feature-phones {
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      #feature-phones>div {
+        margin: auto;
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+      }
+      
+      #feature-phones img {
+        width: 120px;
+        margin-bottom: 10px;
+      }
+      
+      #feature-phones>div:hover {
+        border: 1px solid teal;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      
+      #feature-phones img:hover {
+        transform: scale(1.1);
+      }
+      
+      h5 {
+        margin: auto;
+        margin-top: 10px;
+      }
+      #footer{
+    display: none;
+        width: 90%;
+      }
+  }
+  
+  /* Media Queries */
+  
+  @media (min-width: 1025px) {
+    #footer{
+        display: none;
+        width: 90%;
+      }
+    #body {
+      display: flex;
+      /* margin: auto; */
     }
-}
+  
+    #sideBar {
+      /* position: fixed; */
+      width: 20%;
+    }
+  
+    #main-body {
+      /* margin-left: 220px; */
+      width: 80%;
+      padding: 5px;
+    }
+  
+    #top-ads img {
+      width: 75px;
+    }
+  
+    #smart-phones {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  
+    #products-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    #categories {
+      display: flex;
+    }
+  
+    #smart-phones img,
+    #products-list img,
+    #feature-phones img {
+      width: 150px;
+    }
+  }
 
 @media all and (min-width:768px) and (max-width:1023px) {
     #body {
