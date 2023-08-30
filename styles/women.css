@@ -297,6 +297,7 @@ h4{
 
     #main-body {
         display: block;
+        padding: 10px;
     }
 
     #carousal-parent{
@@ -393,6 +394,7 @@ h4{
 
     #main-body {
         display: block;
+        padding: 10px;
     }
 
     #carousal-parent{
@@ -401,6 +403,7 @@ h4{
 
     #carousal img{
         width: 500px;
+        display: none;
     }
 
     #top-ads {
@@ -419,7 +422,7 @@ h4{
     }
 
     #trending-brands img{
-        width: 200px;
+        width: 150px;
     }
 
     #shop-by-categories{
@@ -429,11 +432,11 @@ h4{
     }
 
     #shop-by-categories img{
-        width: 200px;
+        width: 150px;
     }
 
     #trending-now #big{
-       width: 350px; 
+       width: 300px; 
     }
 
     #trending-now #small{
@@ -474,7 +477,7 @@ h4{
     }
 
     #products-list img {
-        width: 200px;
+        width: 150px;
     }
 
     #sorting-div{

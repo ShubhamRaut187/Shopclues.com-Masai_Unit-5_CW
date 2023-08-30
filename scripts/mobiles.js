@@ -29,8 +29,9 @@ function slideshow() {
 fetchData()
 let mainData = [];
 async function fetchData() {
-    let res = await fetch("https://shopclues-project-data.onrender.com/Mobile");
+    let res = await fetch("https://shopclues-server.onrender.com/mobile");
     let data = await res.json();
+    console.log(res);
     console.log(data);
     mainData = data;
     displayData(data);

@@ -32,7 +32,7 @@ let productList = document.getElementById("products-list");
 fetchData()
 
 async function fetchData() {
-    let res = await fetch("https://shopclues-project-data.onrender.com/Women's_Clothing");
+    let res = await fetch("https://shopclues-server.onrender.com/Women");
     let data = await res.json();
     console.log(data);
     mainData = data;

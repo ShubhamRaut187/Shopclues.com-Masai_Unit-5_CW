@@ -36,44 +36,46 @@ slideshow();
 //Data
 let dealsofday_parent = document.getElementById("parent_dealsofday");
 let Homepage_dealsofday_api =
-  "https://shopclues-project-data.onrender.com/Homepagedealsofday";
+  "https://shopclues-server.onrender.com/Homepagedealsofday";
+  
 
 let gadgetstore_parent = document.getElementById("parent_gadgetstore");
 let Homepage_gadgetstore_api =
-  "https://shopclues-project-data.onrender.com/Homepagegadgetstore";
+  "https://shopclues-server.onrender.com/Homepagegadgetstore";
 
 let festivespecial_parent = document.getElementById("parent_Festivespecials");
 let Homepage_festivespecial_api =
-  "https://shopclues-project-data.onrender.com/Homepagefestivalstore";
+  "https://shopclues-server.onrender.com/Homepagefestivalstore";
 
 let fasionzone_parent = document.getElementById("parent_fasionzone");
 let Homepage_fasionzone_api =
-  "https://shopclues-project-data.onrender.com/Homepagefashionzone";
+  "https://shopclues-server.onrender.com/Homepagefashionzone";
 
 let sportsandhealth_parent = document.getElementById("parent_sportsandhealth");
 let Homepage_sports_api =
-  "https://shopclues-project-data.onrender.com/Homepagesports";
+  "https://shopclues-server.onrender.com/Homepagesports";
 
 let brandstore_parent = document.getElementById("parent_brand_store");
 let Homepage_brandstore_api =
-  "https://shopclues-project-data.onrender.com/Homepagebrandstore";
+  "https://shopclues-server.onrender.com/Homepagebrandstore";
 
 let brandeddeals_parent = document.getElementById("parent_branded_deals");
 let Homepage_brandeddeals_api =
-  "https://shopclues-project-data.onrender.com/Homepagebranddeals";
+  "https://shopclues-server.onrender.com/Homepagebranddeals";
 // Fetch Function
 let fetchdata = (api_link, parent_element) => {
   let product_data = [];
   fetch(api_link)
     .then((response) => {
       return response.json();
+      
     })
     .then((response) => {
       product_data = response;
       displaydata(product_data, parent_element);
       console.log(response);
     })
-    .catch((error) => {
+    .catch((error) => {s
       console.log(error);
     });
 };
